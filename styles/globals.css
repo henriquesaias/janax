@@ -193,6 +193,7 @@ h2 {
 }
 
 .title-container {
+  padding: .3em;
   text-align: center;
   margin-bottom: 5em;
   font-size: 20px;
@@ -306,6 +307,33 @@ h2 {
 
   #about-final-quote p {
     line-height: 22.27px;
+  }
+
+  .title-container {
+    margin-bottom: 2em;
+  }
+
+  .embed {
+    max-width: 80vw;
+    margin: auto;
+    padding-right: 8px;
+  }
+
+  .embed iframe {
+    height: 240px;
+  }
+
+  .embed:before {
+    left: -1.5em;
+    width: 8px;
+    background-image: url('/janax/m_bamboo.png');
+  }
+  
+  .embed:after {
+    content: '';
+    right: calc(-1.5em + 8px);
+    width: 8px;
+    background-image: url('/janax/m_bamboo.png');
   }
 }
 

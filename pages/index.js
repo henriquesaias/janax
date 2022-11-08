@@ -5,6 +5,7 @@ import { Button, Icon, Grid, Image } from 'semantic-ui-react'
 
 export default function Home() {
   const router = useRouter()
+  document.documentElement.style.setProperty('--prefix', prefix);
 
   return (
     <div>
