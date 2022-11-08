@@ -38,6 +38,14 @@ h2 {
   height: auto;
 }
 
+.py3 {
+  padding: 3em 0;
+}
+
+.py5 {
+  padding: 5em 0;
+}
+
 .ml {
   margin-left: .5em;
 }
@@ -48,22 +56,29 @@ h2 {
   margin-left: -.75em;
 }
 
-.full-page {
+.flex {
   display: flex;
+  flex-direction: column; 
+  justify-content: center;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.full-page {
   padding: 2.5rem;
   width: 100%;
   min-width: 100vw;
   height: 100%;
   min-height: 100vh;
   background-size: cover;
-  background-position: 57%;
-  flex-direction: column; 
-  justify-content: center;
-  position: relative;
 }
 
 #splash {
   background-image: url('/janax/bg caracol didge.jpeg');
+  position: relative;
+  background-position: 57%;
 }
 
 #logo-container {
@@ -83,7 +98,7 @@ h2 {
   justify-content: center;
 }
 
-#splash-nav .button, #listen .button{
+#splash-nav .button, #listen .button, #watch .button {
   color: rgba(255, 255, 255, 0.9);
   background: url('/janax/button background.png') repeat rgba(74, 80, 61, 0.55);
   box-shadow: 0 5px 5px rgba(54, 60, 41, 0.6);
@@ -98,7 +113,7 @@ h2 {
   margin: 0 3rem;
 }
 
-#splash-nav .button:hover, #listen .button:hover{
+#splash-nav .button:hover, #listen .button:hover, #watch .button:hover {
   color: rgba(255, 255, 255, 1);
   background: url('/janax/button background.png') repeat rgba(74, 80, 61, 1);
 }
@@ -193,25 +208,30 @@ h2 {
 }
 
 .title-container {
-  padding: .3em;
   text-align: center;
   margin-bottom: 5em;
+  color: #3C4230;;
+}
+
+.title-container p, #shop-container p {
   font-size: 20px;
   font-family: 'Averia Sans Libre';
   letter-spacing: 0.2em;
+  line-height: 24.75px !important
 }
 
-.embed {
+.spotify-playlist {
   text-align: center;
   position: relative;
 }
 
-#shop-container {
+#shop-container, #watch-more {
   text-align: center;
   margin: 2em 0 3em 0;
+  color: #3C4230;
 }
 
-.embed:before {
+.spotify-playlist:before {
   content: '';
   position: absolute;
   left: -3.5em;
@@ -221,7 +241,7 @@ h2 {
   background-image: url('/janax/bamboo.png');
 }
 
-.embed:after {
+.spotify-playlist:after {
   content: '';
   position: absolute;
   right: -3.5em;
@@ -231,11 +251,47 @@ h2 {
   background-image: url('/janax/bamboo.png');
 }
 
+#watch {
+  background-image: url('/janax/bg caracol didge.jpeg');
+  padding: 5rem 0;
+  background-position: 57%;
+}
+
+#watch h2 {
+  color: #FFFEFC;
+  text-align: center;
+}
+
+#experience {
+  background-image: url('/janax/experience.png');
+  padding: 5rem 0;
+}
+
+.soundcloud-arrows {
+  opacity: .6;
+  display: inline-block;
+  text-align: -webkit-center;
+  margin-top: 3em;
+}
+
+.soundcloud-arrows img {
+  margin-bottom: -1.5em
+}
+
 
 @media (min-width: 600px) {
-  .embed {
-    width: 40%;
+  .spotify-playlist {
+    width: 52%;
     margin: auto;
+  }
+
+  .soundcloud-playlist, #experience .title-container {
+    width: calc(52% + 96px);
+    margin: auto;
+  }
+
+  .mobile-only {
+    display: none !important;
   }
 }
 
@@ -247,7 +303,7 @@ h2 {
   }
 
   .hidden-mobile {
-    display: none;
+    display: none !important;
   }
 
   #logo-container {
@@ -310,30 +366,40 @@ h2 {
   }
 
   .title-container {
-    margin-bottom: 2em;
+    padding: .5em;
+    font-size: 18px !important;
   }
 
-  .embed {
+  .title-container p, #shop-container p {
+    padding: .5em;
+    font-size: 18px !important;
+  }
+
+  .spotify-playlist {
     max-width: 80vw;
     margin: auto;
     padding-right: 8px;
   }
 
-  .embed iframe {
+  .spotify-playlist iframe {
     height: 240px;
   }
 
-  .embed:before {
+  .spotify-playlist:before {
     left: -1.5em;
     width: 8px;
     background-image: url('/janax/m_bamboo.png');
   }
   
-  .embed:after {
+  .spotify-playlist:after {
     content: '';
     right: calc(-1.5em + 8px);
     width: 8px;
     background-image: url('/janax/m_bamboo.png');
+  }
+
+  #watch {
+    background-position: top;
   }
 }
 

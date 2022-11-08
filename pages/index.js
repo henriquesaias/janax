@@ -1,11 +1,42 @@
-import { prefix } from '../components/prefix.js';
+import React from 'react'
+import { prefix } from '../components/prefix.js'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import { Button, Icon, Grid, Image } from 'semantic-ui-react'
+import { Button, Icon, Grid, Image, Modal, Embed, Segment } from 'semantic-ui-react'
+import Flicking from "@egjs/react-flicking";
+import { Perspective } from "@egjs/flicking-plugins";
 
 export default function Home() {
+  const [open, setOpen] = React.useState('')
   const router = useRouter()
-  document.documentElement.style.setProperty('--prefix', prefix);
+  const perspective = [new Perspective({ rotate: 0.5, perspective: 600 })]
+
+  const watch = [
+    {
+      thumb: `${prefix}/watch/yoga sunrise.png`,
+      id: 'eGuvf25VVOk'
+    },
+    {
+      thumb: `${prefix}/watch/caravana.png`,
+      id: 'LVbxNveLkwQ'
+    },
+    {
+      thumb: `${prefix}/watch/mose.png`,
+      id: 'G1Xayi4eHiY'
+    },
+    {
+      thumb: `${prefix}/watch/tierra adentro.png`,
+      id: 'mvty2Scdn5U'
+    },
+    {
+      thumb: ``,
+      id: ''
+    },
+    {
+      thumb: `${prefix}/watch/into nature.png`,
+      id: 'zPAZTPVDUo4'
+    }
+  ]
 
   return (
     <div>
@@ -17,7 +48,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <section id="splash" className='full-page'>
+        <section id="splash" className='full-page flex'>
           <div id="logo-container" className='responsive'>
             <Image ui={false} src={`${prefix}/logo janax.png`} className='ml-1' />
             <Image ui={false} src={`${prefix}/logo pacha.png`} className='ml1' />
@@ -64,7 +95,7 @@ export default function Home() {
                   <p>Let sound & vibration take you on this journey..</p>
                 </div>
 
-                <Image src={`${prefix}/down triangles.png`} centered style={{opacity: .6}} />
+                <Image src={`${prefix}/down triangles.png`} centered style={{ opacity: .6 }} />
               </Grid.Column>
             </Grid.Row>
           </Grid>
@@ -73,16 +104,100 @@ export default function Home() {
         <section id="listen">
           <div className="title-container">
             <h2>Listen</h2>
-            <p>Fly with me lorem ipsum dolor sit amet</p>
+            <p>I share with you my latest Singles, EPs & Albums</p>
           </div>
-          <div className="embed">
-            <iframe style={{borderRadius: 12}} src="https://open.spotify.com/embed/artist/3BHXRZv18jHRR8RDuSq9gK?utm_source=generator&theme=1" width="100%" height="305" frameBorder="0" allowFullScreen="" allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          <div className="spotify-playlist">
+            <iframe style={{ borderRadius: 12 }} src="https://open.spotify.com/embed/artist/3BHXRZv18jHRR8RDuSq9gK?utm_source=generator&theme=1" width="100%" height="305" frameBorder="0" allowFullScreen="" allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
           </div>
           <div id="shop-container">
+            <p>Find the unreleased & Full Sets</p>
             <Button><Icon name='bandcamp' />Shop my Music</Button>
           </div>
         </section>
+
+        <section id="watch">
+          <h2>Watch</h2>
+          <Grid padded relaxed='very' centered className='hidden-mobile'>
+            <Grid.Row columns={3} verticalAlign='middle'>
+              {watch.map((vid, i) =>
+                <Grid.Column textAlign='center' style={{ marginTop: '2.5em' }}>
+                  {
+                    i === 4
+                      ? <a target='_blank' href='https://www.youtube.com/c/JanaxPacha'><Button>Watch More</Button></a>
+                      : <Modal
+                        dimmer='blurring'
+                        closeIcon
+                        open={open === vid.id}
+                        trigger={<Image style={{ borderRadius: 4 }} src={vid.thumb} className='cursor-pointer' />}
+                        onClose={() => setOpen('')}
+                        onOpen={() => setOpen(vid.id)}
+                      >
+                        <Embed
+                          id={vid.id}
+                          source='youtube'
+                          active
+                        />
+                      </Modal>
+                  }
+                </Grid.Column>
+              )}
+            </Grid.Row>
+          </Grid>
+          <div className='mobile-only'>
+            <div className='py5'>
+              <Flicking
+                align='center'
+                panelsPerView={2}
+                circular={true}
+                plugins={perspective}
+              >
+                {watch.map((vid, i) =>
+                  i !== 4 && <div>
+                    <Modal
+                      dimmer='blurring'
+                      closeIcon
+                      open={open === vid.id}
+                      trigger={<Image src={vid.thumb} alt="youtube video" />}
+                      onClose={() => setOpen('')}
+                      onOpen={() => setOpen(vid.id)}
+                    >
+                      <Embed
+                        id={vid.id}
+                        source='youtube'
+                        active
+                      />
+                    </Modal>
+                  </div>
+                )}
+              </Flicking>
+            </div>
+            <div id="watch-more">
+              <a target='_blank' href='https://www.youtube.com/c/JanaxPacha'><Button>Watch More</Button></a>
+            </div>
+          </div>
+        </section>
+
+        <section id="experience">
+          <div className='title-container'>
+            <h2>Experience</h2>
+            <div className='py3'>
+              <p>My Live set is a pure improvised experience where I merge tribal & ethnic instruments with electronic sounds and chants.</p>
+
+              <p>Dive into these journeys with me...</p>
+
+              <p>CLICK BELOW</p>
+
+              <div className='soundcloud-arrows'>
+                <Image src={`${prefix}/vector arrow 1.png`} />
+                <Image src={`${prefix}/vector arrow 2.png`} />
+              </div>
+            </div>
+          </div>
+          <div className="soundcloud-playlist">
+            <iframe width="100%" height="267" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1260178069&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false&visual=true"></iframe>
+          </div>
+        </section>
       </main>
-    </div>
+    </div >
   )
 }
