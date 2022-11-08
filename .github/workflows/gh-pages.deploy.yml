@@ -27,7 +27,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install packages
-        run: m -rf node_modules && yarn install --immutable
+        run: yarn install --immutable
       - name: Build project
         run: yarn
       - name: Export static files
