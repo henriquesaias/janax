@@ -27,11 +27,11 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install packages
-        run: npm ci
+        run: m -rf node_modules && yarn install --immutable
       - name: Build project
-        run: npm run build
+        run: yarn
       - name: Export static files
-        run: npm run export
+        run: yarn export
       - name: Add .nojekyll file
         run: touch ./out/.nojekyll
       - name: Deploy
