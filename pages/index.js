@@ -1,6 +1,7 @@
+import { prefix } from '../components/prefix.js';
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import { Button, Grid, Image } from 'semantic-ui-react'
+import { Button, Icon, Grid, Image } from 'semantic-ui-react'
 
 export default function Home() {
   const router = useRouter()
@@ -17,8 +18,8 @@ export default function Home() {
       <main>
         <section id="splash" className='full-page'>
           <div id="logo-container" className='responsive'>
-            <Image ui={false} src="/logo janax.png" className='ml-1' />
-            <Image ui={false} src="/logo pacha.png" className='ml1' />
+            <Image ui={false} src={`${prefix}/logo janax.png`} className='ml-1' />
+            <Image ui={false} src={`${prefix}/logo pacha.png`} className='ml1' />
           </div>
           <div id="splash-nav">
             <Button onClick={() => router.push('#listen')}>Listen</Button>
@@ -26,8 +27,8 @@ export default function Home() {
             <Button onClick={() => router.push('#experience')}>Experience</Button>
           </div>
           <div id="splash-arrows">
-            <Image src="/down arrow.png" />
-            <Image src="/down arrow.png" />
+            <Image src={`${prefix}/down arrow.png`} />
+            <Image src={`${prefix}/down arrow.png`} />
           </div>
         </section>
 
@@ -37,19 +38,18 @@ export default function Home() {
           </div>
         </section>
 
-        <section className='hidden-mobile'>
-          <Image src='/home pic cropped.png' />
+        <section id='hidden-img' className='hidden-mobile'>
         </section>
 
         <section id="about-me">
           <Grid padded='horizontally'>
             <Grid.Row>
-              <Grid.Column mobile={0} computer={8}></Grid.Column>
+              <Grid.Column computer={8}></Grid.Column>
               <Grid.Column mobile={16} computer={7}>
-                <h2>About me</h2>
+                <h2 className='ml'>About me</h2>
 
                 <div className='icons-container'>
-                  <Image src='/dot.png' /> <Image src='/dot2.png' /> <Image src='/dot3.png' /> <Image src='/arrow right.png' /> <Image src='/arrow right.png' /> <Image src='/arrow right.png' /> <Image src='/dot4.png' /> <Image src='/dot5.png' /> <Image src='/dot6.png' />
+                  <Image src={`${prefix}/dot.png`} /> <Image src={`${prefix}/dot2.png`} /> <Image src={`${prefix}/dot3.png`} /> <Image src={`${prefix}/arrow right.png`} className='tight' /> <Image src={`${prefix}/arrow right.png`} className='tight' /> <Image src={`${prefix}/arrow right.png`} className='tight' /> <Image src={`${prefix}/dot4.png`} /> <Image src={`${prefix}/dot5.png`} /> <Image src={`${prefix}/dot6.png`} />
                 </div>
 
                 <div id="about-text">
@@ -63,10 +63,23 @@ export default function Home() {
                   <p>Let sound & vibration take you on this journey..</p>
                 </div>
 
-                <Image src="/down triangles.png" centered />
+                <Image src={`${prefix}/down triangles.png`} centered style={{ opacity: .6 }} />
               </Grid.Column>
             </Grid.Row>
           </Grid>
+        </section>
+
+        <section id="listen">
+          <div className="title-container">
+            <h2>Listen</h2>
+            <p>Fly with me lorem ipsum dolor sit amet</p>
+          </div>
+          <div className="embed">
+            <iframe style={{ borderRadius: 12 }} src="https://open.spotify.com/embed/artist/3BHXRZv18jHRR8RDuSq9gK?utm_source=generator&theme=1" width="100%" height="305" frameBorder="0" allowFullScreen="" allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+          <div id="shop-container">
+            <Button><Icon name='bandcamp' />Shop my Music</Button>
+          </div>
         </section>
       </main>
     </div>
