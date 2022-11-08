@@ -44,7 +44,7 @@ export default function Home() {
         <section id="about-me">
           <Grid padded='horizontally'>
             <Grid.Row>
-              <Grid.Column mobile={0} computer={8}></Grid.Column>
+              <Grid.Column computer={8}></Grid.Column>
               <Grid.Column mobile={16} computer={7}>
                 <h2 className='ml'>About me</h2>
 
