@@ -75,7 +75,7 @@ export default function Home() {
             <p>Fly with me lorem ipsum dolor sit amet</p>
           </div>
           <div className="embed">
-            <iframe style={{borderRadius: 12}} src="https://open.spotify.com/embed/artist/3BHXRZv18jHRR8RDuSq9gK?utm_source=generator&theme=1" width="100%" height="305" frameBorder="0" allowfullscreen="" allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe style={{borderRadius: 12}} src="https://open.spotify.com/embed/artist/3BHXRZv18jHRR8RDuSq9gK?utm_source=generator&theme=1" width="100%" height="305" frameBorder="0" allowFullScreen="" allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
           </div>
           <div id="shop-container">
             <Button><Icon name='bandcamp' />Shop my Music</Button>
