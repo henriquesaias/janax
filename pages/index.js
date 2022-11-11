@@ -2,7 +2,7 @@ import React from 'react'
 import { prefix } from '../components/prefix.js'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import { Button, Icon, Grid, Image, Modal, Embed, Segment } from 'semantic-ui-react'
+import { Button, Icon, Grid, Image, Modal, Embed } from 'semantic-ui-react'
 import Flicking from "@egjs/react-flicking";
 import { Perspective } from "@egjs/flicking-plugins";
 
@@ -37,6 +37,8 @@ export default function Home() {
       id: 'zPAZTPVDUo4'
     }
   ]
+
+  const photos = [1, 2, 3, 4]
 
   return (
     <div>
@@ -116,7 +118,10 @@ export default function Home() {
         </section>
 
         <section id="watch">
-          <h2>Watch</h2>
+          <div className="title-container">
+            <h2>Watch</h2>
+            <p className='mobile-only'>Fly with me<br />lorem ipsum dolor sit amet</p>
+          </div>
           <Grid padded relaxed='very' centered className='hidden-mobile'>
             <Grid.Row columns={3} verticalAlign='middle'>
               {watch.map((vid, i) =>
@@ -146,7 +151,7 @@ export default function Home() {
           <div className='mobile-only'>
             <div className='py5'>
               <Flicking
-                align='center'
+                align='prev'
                 panelsPerView={2}
                 circular={true}
                 plugins={perspective}
@@ -172,7 +177,9 @@ export default function Home() {
               </Flicking>
             </div>
             <div id="watch-more">
-              <a target='_blank' href='https://www.youtube.com/c/JanaxPacha'><Button>Watch More</Button></a>
+              <a target='_blank' href='https://www.youtube.com/c/JanaxPacha'>
+                <Button>Watch More</Button>
+              </a>
             </div>
           </div>
         </section>
@@ -180,7 +187,7 @@ export default function Home() {
         <section id="experience">
           <div className='title-container'>
             <h2>Experience</h2>
-            <div className='py3'>
+            <div className='py3 hidden-mobile'>
               <p>My Live set is a pure improvised experience where I merge tribal & ethnic instruments with electronic sounds and chants.</p>
 
               <p>Dive into these journeys with me...</p>
@@ -192,10 +199,91 @@ export default function Home() {
                 <Image src={`${prefix}/vector arrow 2.png`} />
               </div>
             </div>
+
+            <div className='py2 mobile-only'>
+              <p>My Live set is a pure improvised experience where I merge tribal & ethnic instruments with electronic sounds and chants.</p>
+
+              <p>Click below to dive into these journeys with me...</p>
+
+              <div className='soundcloud-arrows'>
+                <Image src={`${prefix}/vector arrow 1.png`} />
+                <Image src={`${prefix}/vector arrow 2.png`} />
+              </div>
+            </div>
           </div>
           <div className="soundcloud-playlist">
             <iframe width="100%" height="267" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1260178069&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false&visual=true"></iframe>
           </div>
+        </section>
+
+        <section id="photos">
+          <div className="title-container">
+            <h2>Photos</h2>
+            {/* <p>HI - FI</p> */}
+          </div>
+
+          <Flicking
+            align='center'
+            panelsPerView={3}
+            circular={true}
+            plugins={perspective}
+          >
+            {photos.map((photo) =>
+              <div>
+                <Image src={`${prefix}/FOTOS/${photo}.jpg`} style={{ maxHeight: '50vh' }} verticalAlign='middle' alt={photo} />
+              </div>
+            )}
+          </Flicking>
+
+          <div id="download-photos">
+            <a href="https://drive.google.com/drive/folders/1YR9dXe6xwinw5lnzUd74rjVNUBB_GEdn?usp=share_link" target="_blank">
+              <Button>Download high quality</Button>
+            </a>
+          </div>
+        </section>
+
+        <section id="connect" className='full-page'>
+          <Grid container padded='horizontally'>
+            <Grid.Row>
+              <Grid.Column computer={4}></Grid.Column>
+              <Grid.Column mobile={16} computer={12}>
+                <div id='connect-contacts'>
+                  BOOKINGS
+                  <br className='mobile-only' />
+                  <div className='icons-container hidden-mobile'>
+                    <Image src={`${prefix}/dot.png`} /> <Image src={`${prefix}/dot2.png`} /> <Image src={`${prefix}/dot3.png`} /> <Image src={`${prefix}/arrow right.png`} className='tight' /> <Image src={`${prefix}/arrow right.png`} className='tight' /> <Image src={`${prefix}/arrow right.png`} className='tight' /> <Image src={`${prefix}/dot4.png`} /> <Image src={`${prefix}/dot5.png`} /> <Image src={`${prefix}/dot6.png`} />
+                    &nbsp;
+                  </div>
+                  <a href='mailto:artists@nativo-music.com' target="_blank">artists@nativo-music.com</a>
+                  <br />
+                  <div className='icons-container mobile-only'>
+                    <Image src={`${prefix}/dot.png`} /> <Image src={`${prefix}/dot2.png`} /> <Image src={`${prefix}/dot3.png`} /> <Image src={`${prefix}/arrow right.png`} className='tight' /> <Image src={`${prefix}/arrow right.png`} className='tight' /> <Image src={`${prefix}/arrow right.png`} className='tight' /> <Image src={`${prefix}/dot4.png`} /> <Image src={`${prefix}/dot5.png`} /> <Image src={`${prefix}/dot6.png`} />
+                  </div>
+                  <br className='mobile-only' />
+                  CONTACT
+                  <br className='mobile-only' />
+                  <div className='icons-container hidden-mobile'>
+                    <Image src={`${prefix}/dot.png`} /> <Image src={`${prefix}/dot2.png`} /> <Image src={`${prefix}/dot3.png`} /> <Image src={`${prefix}/arrow right.png`} className='tight' /> <Image src={`${prefix}/arrow right.png`} className='tight' /> <Image src={`${prefix}/arrow right.png`} className='tight' /> <Image src={`${prefix}/dot4.png`} /> <Image src={`${prefix}/dot5.png`} /> <Image src={`${prefix}/dot6.png`} />
+                    &nbsp;
+                  </div>
+                  <a href='mailto:janaxpachamusica@gmail.com' target="_blank">janaxpachamusica@gmail.com</a>
+                </div>
+
+                <h2 className='pt'>Support the Mission</h2>
+
+                <div className='soundcloud-arrows connect-arrows'>
+                  <Image src={`${prefix}/vector arrow 1.png`} />
+                  <Image src={`${prefix}/vector arrow 2.png`} />
+                </div>
+
+                <div style={{ textAlign: 'center' }}>
+                  <a href='https://paypal.me/janaxpachamusica' target="_blank">
+                    <Button circular basic className='paypal-btn'><Icon circular size='huge' name='paypal' fitted /></Button>
+                  </a>
+                </div>
+              </Grid.Column>
+            </Grid.Row>
+          </Grid>
         </section>
       </main>
     </div >
