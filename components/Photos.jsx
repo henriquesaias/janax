@@ -5,7 +5,7 @@ import { Perspective } from "@egjs/flicking-plugins";
 import { Button, Image } from 'semantic-ui-react'
 
 export default function Photos() {
-  const photos = [1, 2, 3, 4]
+  const photos = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
   const perspective = [new Perspective({ rotate: 0.5, perspective: 600 })]
 
   return (
@@ -17,6 +17,7 @@ export default function Photos() {
 
       <Flicking
         align='center'
+        defaultIndex={1}
         panelsPerView={3}
         circular={true}
         plugins={perspective}

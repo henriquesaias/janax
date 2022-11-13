@@ -10,9 +10,12 @@ import Experience from '../components/Experience.jsx';
 import Connect from '../components/Connect.jsx';
 import TopMenu from '../components/TopMenu.jsx';
 import { InView } from 'react-intersection-observer';
+import { Icon, Image } from 'semantic-ui-react';
+import { prefix } from '../utils/prefix.js'
 
 export default function Home() {
   const [section, setSection] = React.useState('splash')
+  const [menuOpen, setMenuOpen] = React.useState(false)
 
   return (
     <div>
@@ -23,8 +26,22 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <nav className='top-nav'>
-        <TopMenu section={section} />
+      {!menuOpen
+        ? <Icon
+          name={menuOpen ? 'close' : 'bars'}
+          className={`mobile-only expand-from-center menu-icon ${menuOpen ? 'open-menu' : 'closed-menu'}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+          size='large'
+        />
+        : <span className={`mobile-only expand-from-center menu-icon ${menuOpen ? 'open-menu' : 'closed-menu'}`}>
+          <Image onClick={() => setMenuOpen(!menuOpen)} style={{
+            paddingTop: 3,
+            paddingRight: 10
+          }} src={`${prefix}/close.png`} />
+        </span>
+      }
+      <nav className={`top-nav ${menuOpen ? 'open-menu' : 'closed-menu'} ${section === 'splash' || section === 'quote' ? 'hidden' : ''}`}>
+        <TopMenu setMenuOpen={setMenuOpen} section={section} />
       </nav>
 
       <main>
@@ -33,11 +50,11 @@ export default function Home() {
         </InView>
 
         <InView threshold={0.5} onChange={(inView) => inView && setSection('quote')}>
-          <HanaqQuote />
+          <HanaqQuote section={section} />
         </InView>
 
         <InView threshold={0.5} onChange={(inView) => inView && setSection('about-me')}>
-          <AboutMe />
+          <AboutMe section={section} />
         </InView>
 
         <InView threshold={0.5} onChange={(inView) => inView && setSection('listen')}>
@@ -51,7 +68,7 @@ export default function Home() {
         <InView threshold={0.5} onChange={(inView) => inView && setSection('experience')}>
           <Experience />
         </InView>
-        
+
         <InView threshold={0.5} onChange={(inView) => inView && setSection('photos')}>
           <Photos />
         </InView>

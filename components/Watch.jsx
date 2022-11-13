@@ -37,7 +37,7 @@ export default function Watch() {
     <section id="watch">
       <div className="title-container">
         <h2>Watch</h2>
-        <p className='mobile-only'>Fly with me<br />into the imagination</p>
+        <p className='mobile-only'>Fly with me<br />into the jungle</p>
       </div>
       <Grid padded relaxed='very' centered className='hidden-mobile'>
         <Grid.Row columns={3} verticalAlign='middle'>
