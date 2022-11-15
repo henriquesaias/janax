@@ -2,7 +2,7 @@ import React from 'react'
 import Script from 'next/script'
 import { prefix } from '../utils/prefix.js'
 import Flicking from "@egjs/react-flicking";
-import { Button, Embed, Grid, Modal, Image } from 'semantic-ui-react'
+import { Button, Embed, Grid, Modal, Image, Label, Icon } from 'semantic-ui-react'
 
 export default function Watch() {
   const [open, setOpen] = React.useState('')
@@ -89,9 +89,11 @@ export default function Watch() {
                   open={open === vid.id}
                   trigger={
                     <Image
-                      src={vid.thumb}
-                      alt="youtube video"
-                    />
+                        alt='Youtube video thumbnail'
+                        style={{ borderRadius: 4 }}
+                        src={`https://img.youtube.com/vi/${vid.id}/maxresdefault.jpg`}
+                        className='cursor-pointer thumbnail-container'
+                      />
                   }
                   onClose={() => setOpen('')}
                   onOpen={() => setOpen(vid.id)}
@@ -118,13 +120,24 @@ export default function Watch() {
         </div>
       </div>
       <div className={show ? 'animate-into-view popup-animate' : 'animate-out-of-view popup-animate'}>
-        <Grid>
+        <Image
+          alt=''
+          onClick={() => setShow(false)}
+          style={{
+            paddingTop: 3,
+            paddingRight: 10,
+            float: 'right'
+          }}
+          src={`${prefix}/close.png`}
+          className='cursor-pointer'
+        />
+        <Grid stackable>
           <Grid.Row verticalAlign='middle'>
             <Grid.Column computer={4}>
               <div className="g-ytsubscribe" data-channelid="UCI4O_M7qaQFrWRmTF3D7uPg" data-layout="full" data-count="default"></div>
             </Grid.Column>
             <Grid.Column computer={12}>
-              <h3><img src={`${prefix}/down arrow.png`} style={{ height: 10, transform: 'rotate(90deg)' }} /> {'<'} Consider subscribing to my youtube channel</h3>
+              <h3 className='consider-subscribing'>Consider subscribing to my youtube channel</h3>
             </Grid.Column>
           </Grid.Row>
         </Grid>

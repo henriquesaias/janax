@@ -1,8 +1,11 @@
 import React from 'react'
+import { useRouter } from 'next/router'
 import { prefix } from '../utils/prefix.js'
 import { Grid, Image } from 'semantic-ui-react'
 
 export default function AboutMe({ section }) {
+  const router = useRouter()
+
   return (
     <section id="about-me">
       <Grid padded='horizontally'>
@@ -26,7 +29,14 @@ export default function AboutMe({ section }) {
               <p>Let sound & vibration take you on this journey...</p>
             </div>
 
-            <Image alt='' src={`${prefix}/down triangles.png`} centered className='triangle-down' style={{ opacity: .6 }} />
+            <Image
+              alt=''
+              src={`${prefix}/down triangles.png`}
+              centered
+              className='triangle-down'
+              style={{ opacity: .6 }}
+              onClick={() => router.push('#listen')}
+            />
           </Grid.Column>
         </Grid.Row>
       </Grid>
