@@ -1,40 +1,35 @@
 import React from 'react'
+import Script from 'next/script'
 import { prefix } from '../utils/prefix.js'
 import Flicking from "@egjs/react-flicking";
 import { Button, Embed, Grid, Modal, Image } from 'semantic-ui-react'
 
 export default function Watch() {
-  const [open, setOpen] = React.useState('')  
+  const [open, setOpen] = React.useState('')
+  const [show, setShow] = React.useState(false)
 
   const watch = [
-    {
-      thumb: `${prefix}/watch/yoga sunrise.jpg`,
-      id: 'eGuvf25VVOk'
-    },
-    {
-      thumb: `${prefix}/watch/caravana.jpg`,
-      id: 'LVbxNveLkwQ'
-    },
-    {
-      thumb: `${prefix}/watch/mose.jpg`,
-      id: 'G1Xayi4eHiY'
-    },
-    {
-      thumb: `${prefix}/watch/tierra adentro.jpg`,
-      id: 'mvty2Scdn5U'
-    },
-    {
-      thumb: ``,
-      id: ''
-    },
-    {
-      thumb: `${prefix}/watch/into nature.jpg`,
-      id: 'zPAZTPVDUo4'
-    }
+    { id: 'eGuvf25VVOk' },
+    { id: 'LVbxNveLkwQ' },
+    { id: 'G1Xayi4eHiY' },
+    { id: 'mvty2Scdn5U' },
+    { id: '' },
+    { id: 'zPAZTPVDUo4' }
   ]
+
+  const handleClickVideo = () => {
+    setTimeout(() => {
+      setShow(true)
+    }, 1000)
+    setTimeout(() => {
+      setShow(false)
+    }, 20000)
+  }
+
 
   return (
     <section id="watch">
+      <Script src="https://apis.google.com/js/platform.js" />
       <div className="title-container">
         <h2>Watch</h2>
         <p className='mobile-only'>Fly with me<br />into the jungle</p>
@@ -45,13 +40,28 @@ export default function Watch() {
             <Grid.Column textAlign='center' style={{ marginTop: '2.5em' }} key={vid.id}>
               {
                 i === 4
-                  ? <a target='_blank' href='https://www.youtube.com/c/JanaxPacha' rel='noreferrer noopener'><Button>Watch More</Button></a>
+                  ? <a
+                    target='_blank'
+                    href='https://www.youtube.com/c/JanaxPacha'
+                    rel='noreferrer noopener'
+                  >
+                    <Button>
+                      Watch More
+                    </Button>
+                  </a>
                   : <Modal
                     dimmer='blurring'
                     closeIcon
                     open={open === vid.id}
-                    trigger={<Image alt='' style={{ borderRadius: 4 }} src={vid.thumb} className='cursor-pointer' />}
-                    onClose={() => setOpen('')}
+                    trigger={
+                      <Image
+                        alt='Youtube video thumbnail'
+                        style={{ borderRadius: 4 }}
+                        src={`https://img.youtube.com/vi/${vid.id}/maxresdefault.jpg`}
+                        className='cursor-pointer thumbnail-container'
+                      />
+                    }
+                    onClose={() => { setOpen(''); handleClickVideo() }}
                     onOpen={() => setOpen(vid.id)}
                   >
                     <Embed
@@ -77,7 +87,12 @@ export default function Watch() {
                   dimmer='blurring'
                   closeIcon
                   open={open === vid.id}
-                  trigger={<Image src={vid.thumb} alt="youtube video" />}
+                  trigger={
+                    <Image
+                      src={vid.thumb}
+                      alt="youtube video"
+                    />
+                  }
                   onClose={() => setOpen('')}
                   onOpen={() => setOpen(vid.id)}
                 >
@@ -92,10 +107,27 @@ export default function Watch() {
           </Flicking>
         </div>
         <div id="watch-more">
-          <a target='_blank' href='https://www.youtube.com/c/JanaxPacha'>
-            <Button>Watch More</Button>
+          <a
+            target='_blank'
+            href='https://www.youtube.com/c/JanaxPacha'
+          >
+            <Button>
+              Watch More
+            </Button>
           </a>
         </div>
+      </div>
+      <div className={show ? 'animate-into-view popup-animate' : 'animate-out-of-view popup-animate'}>
+        <Grid>
+          <Grid.Row verticalAlign='middle'>
+            <Grid.Column computer={4}>
+              <div className="g-ytsubscribe" data-channelid="UCI4O_M7qaQFrWRmTF3D7uPg" data-layout="full" data-count="default"></div>
+            </Grid.Column>
+            <Grid.Column computer={12}>
+              <h3><img src={`${prefix}/down arrow.png`} style={{ height: 10, transform: 'rotate(90deg)' }} /> {'<'} Consider subscribing to my youtube channel</h3>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
       </div>
     </section>
   )

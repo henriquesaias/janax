@@ -26,7 +26,7 @@ export default function AboutMe({ section }) {
               <p>Let sound & vibration take you on this journey...</p>
             </div>
 
-            <Image alt='' src={`${prefix}/down triangles.png`} centered style={{ opacity: .6 }} />
+            <Image alt='' src={`${prefix}/down triangles.png`} centered className='triangle-down' style={{ opacity: .6 }} />
           </Grid.Column>
         </Grid.Row>
       </Grid>

@@ -67,7 +67,7 @@ export default function Home() {
         </InView>
 
         <InView threshold={0.5} onChange={(inView) => inView && setSection('experience')}>
-          <Experience />
+          <Experience section={section} />
         </InView>
 
         <InView threshold={0.5} onChange={(inView) => inView && setSection('photos')}>

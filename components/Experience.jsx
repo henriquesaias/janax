@@ -2,12 +2,12 @@ import React from 'react'
 import { prefix } from '../utils/prefix.js'
 import { Image } from 'semantic-ui-react'
 
-export default function Experience() {
+export default function Experience({ section }) {
   return (
     <section id="experience">
       <div className='title-container'>
         <h2>Experience</h2>
-        <div className='py3 hidden-mobile'>
+        <div className={`py3 hidden-mobile ${section === 'experience' ? 'animate-into-view' : 'animate-out-of-view'}`}>
           <p>My Live set is a pure improvised experience where I merge tribal & ethnic instruments with electronic sounds and chants.</p>
 
           <p>Dive into these journeys with me...</p>
