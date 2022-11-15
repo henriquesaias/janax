@@ -432,6 +432,26 @@ h3 {
   /* opacity: 1; */
 }
 
+#watch .thumbnail-container {
+  transition: transform .7s ease-in-out; 
+}
+#watch .thumbnail-container:hover {
+  transform: scale(1.05);
+}
+
+.popup-animate {
+  width: calc(100% - 4em);
+  padding: 2em 4em;
+  float: left;
+  background-image: url('/janax/quote texture.png') !important;
+  background-size: contain !important;
+  background-blend-mode: multiply !important;
+  margin-left: 2em;
+  border-radius: 4px;
+}
+
+/* MEDIA QUERIES */
+
 @media only screen and (max-width: 1199px) and (min-width: 1000px)  {
   #anchor-tags a {
     margin-right: 22px;
@@ -690,6 +710,16 @@ h3 {
     background-size: cover;
   }
 
+  .popup-animate .consider-subscribing {
+    font-size: small;
+    text-align: center;
+    animation: none !important;
+  }
+
+  .consider-subscribing::before {
+    content: '';
+  }
+
   #experience .title-container, #watch .title-container {
     margin-bottom: 1em;
   }
@@ -722,19 +752,22 @@ h3 {
   }
 }
 
+/* ANIMATIONS */
 
 .animate-out-of-view {
   opacity: 0;
   filter: blur(5px);
-  /* transform: translateY(100%); */
-  transition: opacity 2s, blur 10s ease-in-out;
+  transition: opacity .7s, filter 5s, transform 1s ease-in-out;
+}
+
+.animate-out-of-view.popup-animate {
+  transform: translateY(50vh);
 }
 
 .animate-into-view {
   opacity: 1;
-  /* transform: translateY(0); */
   filter: blur(0); 
-  transition: opacity 2s, blur 10s ease-in-out;
+  transition: opacity 2s, filter 1s ease-in-out;
 }
 
 @keyframes updown {
@@ -812,31 +845,4 @@ h3 {
   clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
     -webkit-clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
   }
-}
-
-
-
-
-
-
-
-
-
-#watch .thumbnail-container {
-  transition: transform .7s ease-in-out; 
-}
-#watch .thumbnail-container:hover {
-  transform: scale(1.05);
-}
-
-.popup-animate {
-  width: calc(100% - 4em);
-  padding: 2em 4em;
-  float: left;
-  background-image: url('/janax/quote texture.png') !important;
-  background-size: contain !important;
-  background-blend-mode: multiply !important;
-  margin-left: 2em;
-  border-radius: 4px;
-
 }
