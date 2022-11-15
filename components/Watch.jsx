@@ -8,19 +8,19 @@ export default function Watch() {
 
   const watch = [
     {
-      thumb: `${prefix}/watch/yoga sunrise.png`,
+      thumb: `${prefix}/watch/yoga sunrise.jpg`,
       id: 'eGuvf25VVOk'
     },
     {
-      thumb: `${prefix}/watch/caravana.png`,
+      thumb: `${prefix}/watch/caravana.jpg`,
       id: 'LVbxNveLkwQ'
     },
     {
-      thumb: `${prefix}/watch/mose.png`,
+      thumb: `${prefix}/watch/mose.jpg`,
       id: 'G1Xayi4eHiY'
     },
     {
-      thumb: `${prefix}/watch/tierra adentro.png`,
+      thumb: `${prefix}/watch/tierra adentro.jpg`,
       id: 'mvty2Scdn5U'
     },
     {
@@ -28,7 +28,7 @@ export default function Watch() {
       id: ''
     },
     {
-      thumb: `${prefix}/watch/into nature.png`,
+      thumb: `${prefix}/watch/into nature.jpg`,
       id: 'zPAZTPVDUo4'
     }
   ]
@@ -50,7 +50,7 @@ export default function Watch() {
                     dimmer='blurring'
                     closeIcon
                     open={open === vid.id}
-                    trigger={<Image style={{ borderRadius: 4 }} src={vid.thumb} className='cursor-pointer' />}
+                    trigger={<Image alt='' style={{ borderRadius: 4 }} src={vid.thumb} className='cursor-pointer' />}
                     onClose={() => setOpen('')}
                     onOpen={() => setOpen(vid.id)}
                   >

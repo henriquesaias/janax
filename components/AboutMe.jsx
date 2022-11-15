@@ -12,7 +12,7 @@ export default function AboutMe({ section }) {
             <h2 className='ml'>About me</h2>
 
             <div className='icons-container'>
-              <Image src={`${prefix}/dot.png`} /> <Image src={`${prefix}/dot2.png`} /> <Image src={`${prefix}/dot3.png`} /> <Image src={`${prefix}/arrow right.png`} className='tight' /> <Image src={`${prefix}/arrow right.png`} className='tight' /> <Image src={`${prefix}/arrow right.png`} className='tight' /> <Image src={`${prefix}/dot4.png`} /> <Image src={`${prefix}/dot5.png`} /> <Image src={`${prefix}/dot6.png`} />
+              <Image alt='' src={`${prefix}/dot.png`} /> <Image alt='' src={`${prefix}/dot2.png`} /> <Image alt='' src={`${prefix}/dot3.png`} /> <Image alt='' src={`${prefix}/arrow right.png`} className='tight' /> <Image alt='' src={`${prefix}/arrow right.png`} className='tight' /> <Image alt='' src={`${prefix}/arrow right.png`} className='tight' /> <Image alt='' src={`${prefix}/dot4.png`} /> <Image alt='' src={`${prefix}/dot5.png`} /> <Image alt='' src={`${prefix}/dot6.png`} />
             </div>
 
             <div id="about-text" className={section === 'about-me' ? 'animate-into-view' : 'animate-out-of-view'}>
@@ -26,7 +26,7 @@ export default function AboutMe({ section }) {
               <p>Let sound & vibration take you on this journey...</p>
             </div>
 
-            <Image src={`${prefix}/down triangles.png`} centered style={{ opacity: .6 }} />
+            <Image alt='' src={`${prefix}/down triangles.png`} centered style={{ opacity: .6 }} />
           </Grid.Column>
         </Grid.Row>
       </Grid>

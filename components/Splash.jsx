@@ -9,8 +9,8 @@ export default function Splash() {
   return (
     <section id="splash" className='full-page flex'>
       <div id="logo-container" className='responsive'>
-        <Image ui={false} src={`${prefix}/logo janax.png`} className='ml-1' />
-        <Image ui={false} src={`${prefix}/logo pacha.png`} className='ml1' />
+        <Image alt='Janax' ui={false} src={`${prefix}/logo janax.png`} className='ml-1' />
+        <Image alt='Pacha' ui={false} src={`${prefix}/logo pacha.png`} className='ml1' />
       </div>
       <div id="splash-nav">
         <Button onClick={() => router.push('#listen')}>Listen</Button>
@@ -18,8 +18,8 @@ export default function Splash() {
         <Button onClick={() => router.push('#experience')}>Experience</Button>
       </div>
       <div id="splash-arrows" onClick={() => router.push('#hanaq-quote')}>
-        <Image src={`${prefix}/down arrow.png`} />
-        <Image src={`${prefix}/down arrow.png`} />
+        <Image alt='' src={`${prefix}/down arrow.png`} />
+        <Image alt='Scroll down' src={`${prefix}/down arrow.png`} />
       </div>
     </section>)
 }

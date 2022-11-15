@@ -15,8 +15,8 @@ export default function Experience() {
           <p>CLICK BELOW</p>
 
           <div className='soundcloud-arrows'>
-            <Image src={`${prefix}/vector arrow 1.png`} />
-            <Image src={`${prefix}/vector arrow 2.png`} />
+            <Image alt='' src={`${prefix}/vector arrow 1.png`} />
+            <Image alt='' src={`${prefix}/vector arrow 2.png`} />
           </div>
         </div>
 
@@ -26,8 +26,8 @@ export default function Experience() {
           <p>Click below to dive into these journeys with me...</p>
 
           <div className='soundcloud-arrows'>
-            <Image src={`${prefix}/vector arrow 1.png`} />
-            <Image src={`${prefix}/vector arrow 2.png`} />
+            <Image alt='' src={`${prefix}/vector arrow 1.png`} />
+            <Image alt='' src={`${prefix}/vector arrow 2.png`} />
           </div>
         </div>
       </div>

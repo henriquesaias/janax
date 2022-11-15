@@ -24,7 +24,7 @@ export default function Photos() {
       >
         {photos.map((photo) =>
           <div key={photo}>
-            <Image src={`${prefix}/FOTOS/${photo}.jpg`} style={{ maxHeight: '50vh' }} verticalAlign='middle' alt={photo} />
+            <Image src={`${prefix}/FOTOS/${photo}.jpg`} className='slider-photo' verticalAlign='middle' alt={photo} />
           </div>
         )}
       </Flicking>

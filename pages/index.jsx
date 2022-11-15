@@ -35,7 +35,7 @@ export default function Home() {
           size='large'
         />
         : <span className={`mobile-only expand-from-center menu-icon ${menuOpen ? 'open-menu' : 'closed-menu'}`}>
-          <Image onClick={() => setMenuOpen(!menuOpen)} style={{
+          <Image alt='' onClick={() => setMenuOpen(!menuOpen)} style={{
             paddingTop: 3,
             paddingRight: 10
           }} src={`${prefix}/close.png`} />

@@ -7,8 +7,8 @@ export default function TopMenu({ setMenuOpen, section }) {
     <>
       <div id="anchor-tags">
         {/* <div id="logo-container" className='responsive mobile-only'>
-          <Image ui={false} src={`${prefix}/logo janax.png`} className='ml-1' />
-          <Image ui={false} src={`${prefix}/logo pacha.png`} className='ml1' />
+          <Image alt='' ui={false} src={`${prefix}/logo janax.png`} className='ml-1' />
+          <Image alt='' ui={false} src={`${prefix}/logo pacha.png`} className='ml1' />
         </div> */}
         <a href='#about-me' className={section === 'about-me' ? 'in-view' : ''} onClick={() => setMenuOpen(false)}>About Me</a>
         <a href='#listen' className={section === 'listen' ? 'in-view' : ''} onClick={() => setMenuOpen(false)}>Listen</a>

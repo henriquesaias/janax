@@ -13,19 +13,19 @@ export default function Connect() {
               BOOKINGS
               <br className='mobile-only' />
               <div className='icons-container hidden-mobile'>
-                <Image src={`${prefix}/dot.png`} /> <Image src={`${prefix}/dot2.png`} /> <Image src={`${prefix}/dot3.png`} /> <Image src={`${prefix}/arrow right.png`} className='tight' /> <Image src={`${prefix}/arrow right.png`} className='tight' /> <Image src={`${prefix}/arrow right.png`} className='tight' /> <Image src={`${prefix}/dot4.png`} /> <Image src={`${prefix}/dot5.png`} /> <Image src={`${prefix}/dot6.png`} />
+                <Image alt='' src={`${prefix}/dot.png`} /> <Image alt='' src={`${prefix}/dot2.png`} /> <Image alt='' src={`${prefix}/dot3.png`} /> <Image alt='' src={`${prefix}/arrow right.png`} className='tight' /> <Image alt='' src={`${prefix}/arrow right.png`} className='tight' /> <Image alt='' src={`${prefix}/arrow right.png`} className='tight' /> <Image alt='' src={`${prefix}/dot4.png`} /> <Image alt='' src={`${prefix}/dot5.png`} /> <Image alt='' src={`${prefix}/dot6.png`} />
                 &nbsp;
               </div>
               <a href='mailto:artists@nativo-music.com' target="_blank">artists@nativo-music.com</a>
               <br />
               <div className='icons-container mobile-only'>
-                <Image src={`${prefix}/dot.png`} /> <Image src={`${prefix}/dot2.png`} /> <Image src={`${prefix}/dot3.png`} /> <Image src={`${prefix}/arrow right.png`} className='tight' /> <Image src={`${prefix}/arrow right.png`} className='tight' /> <Image src={`${prefix}/arrow right.png`} className='tight' /> <Image src={`${prefix}/dot4.png`} /> <Image src={`${prefix}/dot5.png`} /> <Image src={`${prefix}/dot6.png`} />
+                <Image alt='' src={`${prefix}/dot.png`} /> <Image alt='' src={`${prefix}/dot2.png`} /> <Image alt='' src={`${prefix}/dot3.png`} /> <Image alt='' src={`${prefix}/arrow right.png`} className='tight' /> <Image alt='' src={`${prefix}/arrow right.png`} className='tight' /> <Image alt='' src={`${prefix}/arrow right.png`} className='tight' /> <Image alt='' src={`${prefix}/dot4.png`} /> <Image alt='' src={`${prefix}/dot5.png`} /> <Image alt='' src={`${prefix}/dot6.png`} />
               </div>
               <br className='mobile-only' />
               CONTACT
               <br className='mobile-only' />
               <div className='icons-container hidden-mobile'>
-                <Image src={`${prefix}/dot.png`} /> <Image src={`${prefix}/dot2.png`} /> <Image src={`${prefix}/dot3.png`} /> <Image src={`${prefix}/arrow right.png`} className='tight' /> <Image src={`${prefix}/arrow right.png`} className='tight' /> <Image src={`${prefix}/arrow right.png`} className='tight' /> <Image src={`${prefix}/dot4.png`} /> <Image src={`${prefix}/dot5.png`} /> <Image src={`${prefix}/dot6.png`} />
+                <Image alt='' src={`${prefix}/dot.png`} /> <Image alt='' src={`${prefix}/dot2.png`} /> <Image alt='' src={`${prefix}/dot3.png`} /> <Image alt='' src={`${prefix}/arrow right.png`} className='tight' /> <Image alt='' src={`${prefix}/arrow right.png`} className='tight' /> <Image alt='' src={`${prefix}/arrow right.png`} className='tight' /> <Image alt='' src={`${prefix}/dot4.png`} /> <Image alt='' src={`${prefix}/dot5.png`} /> <Image alt='' src={`${prefix}/dot6.png`} />
                 &nbsp;
               </div>
               <a href='mailto:janaxpachamusica@gmail.com' target="_blank">janaxpachamusica@gmail.com</a>
@@ -34,8 +34,8 @@ export default function Connect() {
             <h2 className='pt'>Support the Mission</h2>
 
             <div className='soundcloud-arrows connect-arrows'>
-              <Image src={`${prefix}/vector arrow 1.png`} />
-              <Image src={`${prefix}/vector arrow 2.png`} />
+              <Image alt='' src={`${prefix}/vector arrow 1.png`} />
+              <Image alt='' src={`${prefix}/vector arrow 2.png`} />
             </div>
 
             <div style={{ textAlign: 'center' }}>
