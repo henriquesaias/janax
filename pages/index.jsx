@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Head from 'next/head'
 import Splash from '../components/Splash.jsx';
 import HanaqQuote from '../components/HanaqQuote.jsx';
@@ -14,11 +14,12 @@ import { Icon, Image } from 'semantic-ui-react';
 import { prefix } from '../utils/prefix.js'
 
 export default function Home() {
-  const [section, setSection] = React.useState('splash')
-  const [menuOpen, setMenuOpen] = React.useState(false)
+  const [section, setSection] = useState('splash')
+  const [menuOpen, setMenuOpen] = useState(false)
 
   return (
     <div>
+      <div className='scroll-line'></div>
       <Head>
         <title>Janax Pacha</title>
         <meta name="description" content="The Land of Heaven" />

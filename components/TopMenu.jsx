@@ -6,10 +6,10 @@ export default function TopMenu({ setMenuOpen, section }) {
   return (
     <>
       <div id="anchor-tags">
-        <div id="logo-container" className='responsive mobile-only'>
+        {/* <div id="logo-container" className='responsive mobile-only'>
           <Image ui={false} src={`${prefix}/logo janax.png`} className='ml-1' />
           <Image ui={false} src={`${prefix}/logo pacha.png`} className='ml1' />
-        </div>
+        </div> */}
         <a href='#about-me' className={section === 'about-me' ? 'in-view' : ''} onClick={() => setMenuOpen(false)}>About Me</a>
         <a href='#listen' className={section === 'listen' ? 'in-view' : ''} onClick={() => setMenuOpen(false)}>Listen</a>
         <a href='#watch' className={section === 'watch' ? 'in-view' : ''} onClick={() => setMenuOpen(false)}>Watch</a>

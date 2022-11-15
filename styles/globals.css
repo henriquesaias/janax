@@ -85,7 +85,7 @@ h2 {
 .top-nav {
   display: flex;
   padding: .8em 2.5em;
-  background-image: url('/janax/nav.png');
+  background-image: url('/nav.png');
   background-size: cover;
   position: fixed;
   top: 0;
@@ -113,7 +113,7 @@ h2 {
 }
 
 #anchor-tags {
-  transition: all 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
   border: 0;
 }
 
@@ -127,6 +127,7 @@ h2 {
   line-height: 30px;
   letter-spacing: 0.14em;
   margin-right: 56px;
+  white-space: nowrap;
 }
 
 #anchor-tags a:hover {
@@ -147,7 +148,7 @@ h2 {
 }
 
 #splash {
-  background-image: url('/janax/bg caracol didge.jpeg');
+  background-image: url('/bg caracol didge.jpeg');
   position: relative;
   background-position: 57%;
 }
@@ -171,7 +172,7 @@ h2 {
 
 #splash-nav .button, #listen .button, #watch .button, #download-photos .button {
   color: rgba(255, 255, 255, 0.9);
-  background: url('/janax/button background.png') repeat rgba(74, 80, 61, 0.55);
+  background: url('/button background.png') repeat rgba(74, 80, 61, 0.55);
   box-shadow: 0 5px 5px rgba(54, 60, 41, 0.6);
   border: 0.5px solid rgba(255, 255, 255, 0.6);
   border-radius: 4px;
@@ -186,7 +187,7 @@ h2 {
 
 #splash-nav .button:hover, #listen .button:hover, #watch .button:hover, #download-photos .button:hover {
   color: rgba(255, 255, 255, 1);
-  background: url('/janax/button background.png') repeat rgba(74, 80, 61, 1);
+  background: url('/button background.png') repeat rgba(74, 80, 61, 1);
 }
 
 #splash-arrows {
@@ -195,6 +196,7 @@ h2 {
   left: 50%;
   transform: translate(-50%, -50%);
   animation: updown 3s linear infinite; 
+  cursor: pointer;
 }
 
 #splash-arrows img {
@@ -202,7 +204,7 @@ h2 {
 }
 
 #quote-container {
-  background-image: url('/janax/quote texture.png');
+  background-image: url('/quote texture.png');
   background-size: cover;
   text-align: center;
   overflow: hidden;
@@ -221,13 +223,13 @@ h2 {
 }
 
 #hidden-img {
-  background-image: url('/janax/home pic cropped.png');
+  background-image: url('/home pic cropped.jpeg');
   background-size: cover;
   min-height: 60vh;
 }
 
 #about-me {
-  background-image: url('/janax/about me.png');
+  background-image: url('/about me.png');
   background-size: cover;
   padding: 5rem 0;
 }
@@ -263,7 +265,7 @@ h2 {
 }
 
 #about-final-quote {
-  background-image: url('/janax/scratched bg.png');
+  background-image: url('/scratched bg.png');
   font-family: 'Averia Sans Libre';
   font-style: italic;
   font-weight: 400;
@@ -275,7 +277,7 @@ h2 {
 }
 
 #listen {
-  background-image: url('/janax/listen bg.png'); 
+  background-image: url('/listen bg.png'); 
   background-size: cover;
   padding: 5rem 0;
 }
@@ -313,7 +315,7 @@ h2 {
   top: 0;
   height: 100%;
   width: 24px;
-  background-image: url('/janax/bamboo.png');
+  background-image: url('/bamboo.png');
 }
 
 .spotify-playlist:after {
@@ -323,11 +325,11 @@ h2 {
   top:0;
   height: 100%;
   width: 24px;
-  background-image: url('/janax/bamboo.png');
+  background-image: url('/bamboo.png');
 }
 
 #watch {
-  background-image: url('/janax/bg caracol didge.jpeg');
+  background-image: url('/bg caracol didge.jpeg');
   padding: 5rem 0;
   background-position: 57%;
 }
@@ -338,7 +340,7 @@ h2 {
 }
 
 #experience {
-  background-image: url('/janax/experience.png');
+  background-image: url('/experience.png');
   padding: 5rem 0;
 }
 
@@ -354,7 +356,7 @@ h2 {
 }
 
 #photos {
-  background-image: url('/janax/photos.png');
+  background-image: url('/photos.png');
   padding: 5rem 0;
   text-align: center;
 }
@@ -366,7 +368,7 @@ h2 {
 }
 
 #connect {
-  background: url('/janax/connect.png') rgba(0, 0, 0, .2);
+  background: url('/connect.png') rgba(0, 0, 0, .2);
   background-size: cover;
   background-blend-mode: multiply;
   padding: 5rem 0;
@@ -384,7 +386,7 @@ h2 {
   line-height: 26px;
   letter-spacing: 0.2em;
   text-align: center;
-  /* background: url('/janax/m_scratched bg.png');
+  /* background: url('/m_scratched bg.png');
   background-size: cover; */
 }
 
@@ -396,7 +398,7 @@ h2 {
 
 .paypal {
   color: #FFFEFC;
-  background-image: url('/janax/pp border.png');
+  background-image: url('/pp border.png');
   background-size: cover;
   padding: 1em;
 }
@@ -415,6 +417,37 @@ h2 {
 #connect .icons-container img {
   margin-left: -.2rem;
   /* opacity: 1; */
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 1000px)  {
+  #anchor-tags a {
+    margin-right: 22px;
+  }
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 600px)  {
+  .top-nav {
+    justify-content: center;
+  }
+  
+  #anchor-tags a {
+    font-size: .8rem !important;
+    margin-right: 32px;
+  }
+
+  .top-nav #social-icons {
+    display: none;
+  }
+
+  #about-text {
+    margin-top: 200px !important;
+  }
+
+  #about-text, #about-final-quote {
+    padding: 1em;
+    background-color: rgba(255,255,255,.4);
+    border-radius: 4px;
+  }
 }
 
 @media (min-width: 600px) {  
@@ -437,7 +470,32 @@ h2 {
   }
 }
 
-@media (max-width: 599px) {
+@media only screen and (max-width: 600px) and (min-width: 550px)  {
+  #about-text {
+    margin-top: 400px !important;
+  }
+
+  #about-text, #about-final-quote {
+    padding: 1em;
+    background-color: rgba(255,255,255,.4) !important;
+    border-radius: 4px;
+  }
+}
+
+@media only screen and (max-width: 550px) and (min-width: 470px)  {
+  #about-text {
+    margin-top: 700px !important;
+  }
+}
+
+@media only screen and (max-width: 470px) and (min-width: 400px)  {
+  #about-text {
+    margin-top: 600px !important;
+  }
+}
+
+
+@media (max-width: 600px) {
   h2 {
     padding-left: .2em !important;
     font-size: 36px !important;
@@ -463,10 +521,10 @@ h2 {
   .top-nav {
     padding: 0;
     top: 0;
-    background-image: url('/janax/m_menu.png');
-    background-size: cover;
+    background-image: url('/m_menu.png');
+    background-size: cover !important;
     justify-content: start;
-    transition: all .7s ease-in-out;
+    transition: top .7s ease-in-out;
     overflow: hidden;
     border-radius: 4px;
     box-shadow: 0 5px 5px rgba(54, 60, 41, 0.3);
@@ -529,7 +587,7 @@ h2 {
   }
 
   #quote-container {
-    background-image: url('/janax/m_quote texture.png');
+    background-image: url('/m_quote texture.png');
     background-size: cover;
     text-align: center;
   }
@@ -541,13 +599,13 @@ h2 {
   }
 
   #about-me {
-    background-image: url('/janax/m_about me.png');
+    background-image: url('/m_about me.png');
     padding-top: 2em;
   }
 
   #about-text {
     font-size: 18px;
-    padding-top: 500px;
+    margin-top: 500px;
   }
 
   #about-text p {
@@ -586,14 +644,14 @@ h2 {
   .spotify-playlist:before {
     left: -1.5em;
     width: 8px;
-    background-image: url('/janax/m_bamboo.png');
+    background-image: url('/m_bamboo.png');
   }
   
   .spotify-playlist:after {
     content: '';
     right: calc(-1.5em + 8px);
     width: 8px;
-    background-image: url('/janax/m_bamboo.png');
+    background-image: url('/m_bamboo.png');
   }
 
   .soundcloud-arrows {
@@ -620,23 +678,23 @@ h2 {
   }
 
   #experience .mobile-only p:nth-child(1) {
-    background-image: url('/janax/m_scratched bg.png');
+    background-image: url('/m_scratched bg.png');
   }
 
   #photos {
-    background-image: url('/janax/m_photos.png');
+    background-image: url('/m_photos.png');
     background-size: cover;
   }
 
   #connect {
-    background: url('/janax/m_connect.png') rgba(0, 0, 0, .3);
+    background: url('/m_connect.png') rgba(0, 0, 0, .3);
     background-size: cover;
   }
 
   #connect-contacts {
     font-size: 18px;
     line-height: 20px;
-    /* background: url('/janax/m_scratched bg.png'); */
+    /* background: url('/m_scratched bg.png'); */
     background-size: cover;
     padding: 1em 0;
   }
@@ -652,14 +710,14 @@ h2 {
   opacity: 0;
   filter: blur(5px);
   /* transform: translateY(100%); */
-  transition: all 1s ease-in-out;
+  transition: opacity 1s ease-in-out, blur 1s ease-in-out;
 }
 
 .animate-into-view {
   opacity: 1;
   /* transform: translateY(0); */
   filter: blur(0); 
-  transition: all 1s ease-in-out;
+  transition: opacity 1s ease-in-out, blur 1s ease-in-out;
 }
 
 @keyframes updown {
@@ -677,24 +735,27 @@ h2 {
 @keyframes pulse-bg {
   0% {
     background-size: auto 100%;
+    background-position: left 100%;
   }
 
   25% {
-    background-size: auto 105%;
-    background-position: left 100%;
+    background-size: auto 125%;
+    background-position: left 70%;
   }
 
   50% {
     background-size: auto 100%; 
-  }
-
-  75% {
-    background-size: auto 102%;
     background-position: left 100%;
   }
 
+  75% {
+    background-size: auto 110%;
+    background-position: left 80%;
+  }
+
   100% {
-    background-size: auto 100%; 
+    background-size: auto 100%;
+    background-position: left 100%;
   }
 }
 
@@ -711,3 +772,14 @@ h2 {
     -webkit-clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
   }
 }
+
+.scroll-line{
+  background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+          linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+          linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+    top: 0;
+    left: 0;
+    height: 10px;
+    position: fixed;
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }

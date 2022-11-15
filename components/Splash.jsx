@@ -17,7 +17,7 @@ export default function Splash() {
         <Button onClick={() => router.push('#watch')}>Watch</Button>
         <Button onClick={() => router.push('#experience')}>Experience</Button>
       </div>
-      <div id="splash-arrows">
+      <div id="splash-arrows" onClick={() => router.push('#hanaq-quote')}>
         <Image src={`${prefix}/down arrow.png`} />
         <Image src={`${prefix}/down arrow.png`} />
       </div>
