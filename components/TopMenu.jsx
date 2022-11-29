@@ -1,15 +1,10 @@
 import React from 'react'
-import { prefix } from '../utils/prefix.js'
-import { Icon, Image } from 'semantic-ui-react'
+import { Icon } from 'semantic-ui-react'
 
 export default function TopMenu({ setMenuOpen, section }) {
   return (
     <>
       <div id="anchor-tags">
-        {/* <div id="logo-container" className='responsive mobile-only'>
-          <Image alt='' ui={false} src={`${prefix}/logo janax.png`} className='ml-1' />
-          <Image alt='' ui={false} src={`${prefix}/logo pacha.png`} className='ml1' />
-        </div> */}
         <a href='#about-me' className={section === 'about-me' ? 'in-view' : ''} onClick={() => setMenuOpen(false)}>About Me</a>
         <a href='#listen' className={section === 'listen' ? 'in-view' : ''} onClick={() => setMenuOpen(false)}>Listen</a>
         <a href='#watch' className={section === 'watch' ? 'in-view' : ''} onClick={() => setMenuOpen(false)}>Watch</a>

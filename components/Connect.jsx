@@ -9,7 +9,20 @@ export default function Connect() {
         <Grid.Row>
           <Grid.Column computer={4}></Grid.Column>
           <Grid.Column mobile={16} computer={12}>
-            <div id='connect-contacts'>
+            <h2>Support the Mission</h2>
+
+            <div className='soundcloud-arrows connect-arrows'>
+              <Image alt='' src={`${prefix}/vector arrow 1.png`} />
+              <Image alt='' src={`${prefix}/vector arrow 2.png`} />
+            </div>
+
+            <div style={{ textAlign: 'center' }}>
+              <a href='https://paypal.me/janaxpachamusica' target="_blank">
+                <Button circular basic className='paypal-btn'><Icon circular size='huge' name='paypal' fitted /></Button>
+              </a>
+            </div>
+
+            <div id='connect-contacts' className='py3'>
               BOOKINGS
               <br className='mobile-only' />
               <div className='icons-container hidden-mobile'>
@@ -29,19 +42,6 @@ export default function Connect() {
                 &nbsp;
               </div>
               <a href='mailto:janaxpachamusica@gmail.com' target="_blank">janaxpachamusica@gmail.com</a>
-            </div>
-
-            <h2 className='pt'>Support the Mission</h2>
-
-            <div className='soundcloud-arrows connect-arrows'>
-              <Image alt='' src={`${prefix}/vector arrow 1.png`} />
-              <Image alt='' src={`${prefix}/vector arrow 2.png`} />
-            </div>
-
-            <div style={{ textAlign: 'center' }}>
-              <a href='https://paypal.me/janaxpachamusica' target="_blank">
-                <Button circular basic className='paypal-btn'><Icon circular size='huge' name='paypal' fitted /></Button>
-              </a>
             </div>
           </Grid.Column>
         </Grid.Row>

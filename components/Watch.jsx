@@ -32,7 +32,7 @@ export default function Watch() {
       <Script src="https://apis.google.com/js/platform.js" />
       <div className="title-container">
         <h2>Watch</h2>
-        <p className='mobile-only'>Fly with me<br />into the jungle</p>
+        <p>Check out how the Magic happens</p>
       </div>
       <Grid padded relaxed='very' centered className='hidden-mobile'>
         <Grid.Row columns={3} verticalAlign='middle'>

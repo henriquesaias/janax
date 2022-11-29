@@ -41,7 +41,7 @@ export default function Home() {
           }} src={`${prefix}/close.png`} />
         </span>
       }
-      <nav className={`top-nav ${menuOpen ? 'open-menu' : 'closed-menu'} ${section === 'splash' || section === 'quote' ? 'hidden' : ''}`}>
+      <nav className={`top-nav ${menuOpen ? 'open-menu' : 'closed-menu'} ${section === 'splash' ? 'hidden' : ''}`}>
         <TopMenu setMenuOpen={setMenuOpen} section={section} />
       </nav>
 
@@ -54,7 +54,7 @@ export default function Home() {
           <HanaqQuote section={section} />
         </InView>
 
-        <InView threshold={0.5} onChange={(inView) => inView && setSection('about-me')}>
+        <InView threshold={0.2} onChange={(inView) => inView && setSection('about-me')}>
           <AboutMe section={section} />
         </InView>
 
@@ -66,7 +66,7 @@ export default function Home() {
           <Watch />
         </InView>
 
-        <InView threshold={0.5} onChange={(inView) => inView && setSection('experience')}>
+        <InView threshold={0.2} onChange={(inView) => inView && setSection('experience')}>
           <Experience section={section} />
         </InView>
 
