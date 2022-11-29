@@ -251,19 +251,6 @@ h3 {
   display: initial !important;
   margin: -.5em -.1em 0 .1em;
   opacity: .6;
-  animation: leftright 10s linear infinite;
-}
-
-.icons-container img:nth-child(1), .icons-container img:nth-child(4), .icons-container img:nth-child(8) {
-  animation-delay: 1s;
-}
-
-.icons-container img:nth-child(2), .icons-container img:nth-child(6), .icons-container img:nth-child(9) {
-  animation-delay: 3s;
-}
-
-.icons-container img:nth-child(3), .icons-container img:nth-child(5), .icons-container img:nth-child(7) {
-  animation-delay: 2s;
 }
 
 .icons-container img.tight {
