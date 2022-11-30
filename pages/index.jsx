@@ -50,7 +50,7 @@ export default function Home() {
           <Splash />
         </InView>
 
-        <InView threshold={0.5} onChange={(inView) => inView && setSection('quote')}>
+        <InView threshold={0.2} onChange={(inView) => inView && setSection('quote')}>
           <HanaqQuote section={section} />
         </InView>
 

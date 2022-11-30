@@ -13,11 +13,15 @@ export default function Listen() {
         <iframe style={{ borderRadius: 12 }} src="https://open.spotify.com/embed/artist/3BHXRZv18jHRR8RDuSq9gK?utm_source=generator&theme=1" width="100%" height="305" frameBorder="0" allowFullScreen="" allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
       <div id="shop-container">
-        <Image src={`${prefix}/listen symbol.png`} centered size='tiny' />
-        <p>&bull; Find the Unreleased & Full Sets &bull;</p>
+        <br /><br />
+        <Image src={`${prefix}/listen symbol.png`} className='mb2' centered size='tiny' />
+        <br />
+        <p className='flex-center'>
+          <img src={`${prefix}/losangle.png`} />&nbsp; Find the Unreleased Songs & Full Sets&nbsp; <img src={`${prefix}/losangle.png`} />
+        </p>
         <a href="https://janaxpacha.bandcamp.com/" target="_blank" rel="noreferrer noopener">
           <Button>
-            Shop my Music<br />
+            &bull; Shop my Music &bull;<br />
             <Icon fitted name='bandcamp' size='large' />
           </Button>
         </a>

@@ -9,7 +9,9 @@ export default function Connect() {
         <Grid.Row>
           <Grid.Column computer={4}></Grid.Column>
           <Grid.Column mobile={16} computer={12}>
-            <h2>Support the Mission</h2>
+            <h2>Connect</h2>
+
+            <h4>Support the Mission</h4>
 
             <div className='soundcloud-arrows connect-arrows'>
               <Image alt='' src={`${prefix}/vector arrow 1.png`} />
@@ -22,7 +24,7 @@ export default function Connect() {
               </a>
             </div>
 
-            <div id='connect-contacts' className='py3'>
+            <div id='connect-contacts' className='pt2'>
               BOOKINGS
               <br className='mobile-only' />
               <div className='icons-container hidden-mobile'>
