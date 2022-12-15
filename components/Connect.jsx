@@ -11,19 +11,6 @@ export default function Connect() {
           <Grid.Column mobile={16} computer={12}>
             <h2>Connect</h2>
 
-            <h4>Support the Mission</h4>
-
-            <div className='soundcloud-arrows connect-arrows'>
-              <Image alt='' src={`${prefix}/vector arrow 1.png`} />
-              <Image alt='' src={`${prefix}/vector arrow 2.png`} />
-            </div>
-
-            <div style={{ textAlign: 'center' }}>
-              <a href='https://paypal.me/janaxpachamusica' target="_blank">
-                <Button circular basic className='paypal-btn'><Icon circular size='huge' name='paypal' fitted /></Button>
-              </a>
-            </div>
-
             <div id='connect-contacts' className='pt2'>
               BOOKINGS
               <br className='mobile-only' />
@@ -44,6 +31,19 @@ export default function Connect() {
                 &nbsp;
               </div>
               <a href='mailto:janaxpachamusica@gmail.com' target="_blank">janaxpachamusica@gmail.com</a>
+            </div>
+
+            <h4>Support my Art</h4>
+
+            <div className='soundcloud-arrows connect-arrows'>
+              <Image alt='' src={`${prefix}/vector arrow 1.png`} />
+              <Image alt='' src={`${prefix}/vector arrow 2.png`} />
+            </div>
+
+            <div style={{ textAlign: 'center' }}>
+              <a href='https://paypal.me/janaxpachamusica' target="_blank">
+                <Button circular basic className='paypal-btn'><Icon circular size='huge' name='paypal' fitted /></Button>
+              </a>
             </div>
           </Grid.Column>
         </Grid.Row>

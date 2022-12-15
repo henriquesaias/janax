@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Head from 'next/head'
 import Splash from '../components/Splash.jsx';
 import HanaqQuote from '../components/HanaqQuote.jsx';
@@ -15,7 +15,14 @@ import { prefix } from '../utils/prefix.js'
 
 export default function Home() {
   const [section, setSection] = useState('splash')
+  const [triggered, setTriggered] = useState([])
   const [menuOpen, setMenuOpen] = useState(false)
+
+  React.useEffect(() => {
+    const exists = triggered.includes(section)
+    if (exists) return
+    setTriggered([...triggered, section])
+  }, [section])
 
   return (
     <div>
@@ -51,14 +58,14 @@ export default function Home() {
         </InView>
 
         <InView threshold={0.2} onChange={(inView) => inView && setSection('quote')}>
-          <HanaqQuote section={section} />
+          <HanaqQuote section={section} triggered={triggered.includes('quote')} />
         </InView>
 
         <InView threshold={0.2} onChange={(inView) => inView && setSection('about-me')}>
-          <AboutMe section={section} />
+          <AboutMe section={section} triggered={triggered.includes('about-me')} />
         </InView>
 
-        <InView threshold={0.5} onChange={(inView) => inView && setSection('listen')}>
+        <InView threshold={0.5} onChange={(inView) => inView && setSection('listen')} style={{ marginTop: -1 }}>
           <Listen />
         </InView>
 
@@ -67,10 +74,10 @@ export default function Home() {
         </InView>
 
         <InView threshold={0.2} onChange={(inView) => inView && setSection('experience')}>
-          <Experience section={section} />
+          <Experience section={section} triggered={triggered.includes('experience')} />
         </InView>
 
-        <InView threshold={0.5} onChange={(inView) => inView && setSection('photos')}>
+        <InView threshold={0.5} onChange={(inView) => inView && setSection('photos')} style={{ marginTop: -1 }}>
           <Photos />
         </InView>
 

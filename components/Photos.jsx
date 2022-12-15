@@ -39,7 +39,10 @@ export default function Photos() {
 
       <div id="download-photos">
         <a href="https://drive.google.com/drive/folders/1YR9dXe6xwinw5lnzUd74rjVNUBB_GEdn?usp=share_link" target="_blank">
-          <Button>Download high quality</Button>
+          <Button>
+            Download<br />
+            High Quality
+          </Button>
         </a>
       </div>
     </section>

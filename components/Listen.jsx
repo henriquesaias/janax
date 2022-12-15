@@ -10,13 +10,12 @@ export default function Listen() {
         <p>I share with you my latest Singles, EPs & Albums</p>
       </div>
       <div className="spotify-playlist">
-        <iframe style={{ borderRadius: 12 }} src="https://open.spotify.com/embed/artist/3BHXRZv18jHRR8RDuSq9gK?utm_source=generator&theme=1" width="100%" height="305" frameBorder="0" allowFullScreen="" allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style={{ borderRadius: 12 }} src="https://open.spotify.com/embed/artist/3BHXRZv18jHRR8RDuSq9gK?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allowFullScreen="" allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
       <div id="shop-container">
         <br /><br />
-        <Image src={`${prefix}/listen symbol.png`} className='mb2' centered size='tiny' />
-        <br />
-        <p className='flex-center'>
+        <Image src={`${prefix}/listen symbol.png`} className='mb3' centered size='tiny' />
+        <p className='flex-center' style={{ marginBottom: '2rem' }}>
           <img src={`${prefix}/losangle.png`} />&nbsp; Find the Unreleased Songs & Full Sets&nbsp; <img src={`${prefix}/losangle.png`} />
         </p>
         <a href="https://janaxpacha.bandcamp.com/" target="_blank" rel="noreferrer noopener">
