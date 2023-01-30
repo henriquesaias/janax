@@ -35,7 +35,7 @@ export default function Connect() {
 
             <h4>Support my Art</h4>
 
-            <div className='soundcloud-arrows connect-arrows'>
+            <div className='soundcloud-arrows connect-arrows updownRel'>
               <Image alt='' src={`${prefix}/vector arrow 1.png`} />
               <Image alt='' src={`${prefix}/vector arrow 2.png`} />
             </div>

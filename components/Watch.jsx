@@ -1,12 +1,15 @@
 import React from 'react'
 import Script from 'next/script'
 import { prefix } from '../utils/prefix.js'
-import Flicking from "@egjs/react-flicking";
-import { Button, Embed, Grid, Modal, Image, Label, Icon } from 'semantic-ui-react'
+import Flicking, { ViewportSlot } from "@egjs/react-flicking";
+import { Arrow } from "@egjs/flicking-plugins";
+import "@egjs/flicking-plugins/dist/arrow.css";
+import { Button, Embed, Grid, Modal, Image } from 'semantic-ui-react'
 
 export default function Watch() {
   const [open, setOpen] = React.useState('')
   const [show, setShow] = React.useState(false)
+  const plugins = [new Arrow()]
 
   const watch = [
     { id: 'eGuvf25VVOk' },
@@ -80,6 +83,7 @@ export default function Watch() {
           <Flicking
             circular={true}
             panelsPerView={1}
+            plugins={plugins}
           >
             {watch.map((vid, i) =>
               i !== 4 && <div key={vid.id}>
@@ -106,6 +110,10 @@ export default function Watch() {
                 </Modal>
               </div>
             )}
+            <ViewportSlot>
+              <img src={`${prefix}/left arrow.png`} className="flicking-arrow-prev" />
+              <img src={`${prefix}/right arrow.png`} className="flicking-arrow-next" />
+            </ViewportSlot>
           </Flicking>
         </div>
         <div id="watch-more">

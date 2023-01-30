@@ -132,7 +132,7 @@ h4 {
 .top-nav {
   display: flex;
   padding: .8em 2.5em;
-  background-image: url('/nav.png');
+  background-image: url('/janax/nav.png');
   background-size: cover;
   position: fixed;
   top: 0;
@@ -195,7 +195,7 @@ h4 {
 }
 
 #splash {
-  background-image: url('/bg caracol didge.jpeg');
+  background-image: url('/janax/bg caracol didge.jpeg');
   position: relative;
   background-position: 57%;
 }
@@ -219,7 +219,7 @@ h4 {
 
 #splash-nav .button, #listen .button, #watch .button, #download-photos .button {
   color: rgba(255, 255, 255, 0.9);
-  background: url('/button background.png') repeat rgba(74, 80, 61, 0.55);
+  background: url('/janax/button background.png') repeat rgba(74, 80, 61, 0.55);
   box-shadow: 0 5px 5px rgba(54, 60, 41, 0.6);
   border: 0.5px solid rgba(255, 255, 255, 0.6);
   border-radius: 4px;
@@ -230,11 +230,12 @@ h4 {
   letter-spacing: 0.14em;
   padding: 1em;
   margin: 0 3rem;
+  animation: glide 20s linear infinite;
 }
 
 #splash-nav .button:hover, #listen .button:hover, #watch .button:hover, #download-photos .button:hover {
   color: rgba(255, 255, 255, 1);
-  background: url('/button background.png') repeat rgba(74, 80, 61, 1);
+  background: url('/janax/button background.png') repeat rgba(74, 80, 61, 1);
 }
 
 #splash-arrows {
@@ -251,7 +252,7 @@ h4 {
 }
 
 #quote-container {
-  background-image: url('/quote texture.png');
+  background-image: url('/janax/quote texture.png');
   background-size: cover;
   text-align: center;
   overflow: hidden;
@@ -270,13 +271,13 @@ h4 {
 }
 
 #hidden-img {
-  background-image: url('/home pic cropped.jpeg');
+  background-image: url('/janax/home pic cropped.jpeg');
   background-size: cover;
   min-height: 60vh;
 }
 
 #about-me {
-  background-image: url('/about me.png');
+  background-image: url('/janax/about me.png');
   background-size: cover;
   background-position: center;
   padding: 5rem 0;
@@ -313,7 +314,7 @@ h4 {
 }
 
 #about-final-quote {
-  background-image: url('/scratched bg.png');
+  background-image: url('/janax/scratched bg.png');
   font-family: 'Averia Sans Libre';
   font-style: italic;
   font-weight: 400;
@@ -331,7 +332,7 @@ h4 {
 }
 
 #listen {
-  background-image: url('/listen bg.png'); 
+  background-image: url('/janax/listen bg.png'); 
   background-size: cover;
   padding: 5rem 0;
 }
@@ -377,7 +378,7 @@ h4 {
   top: 0;
   height: 100%;
   width: 24px;
-  background-image: url('/bamboo.png');
+  background-image: url('/janax/bamboo.png');
 }
 
 .spotify-playlist:after {
@@ -387,7 +388,7 @@ h4 {
   top:0;
   height: 100%;
   width: 24px;
-  background-image: url('/bamboo.png');
+  background-image: url('/janax/bamboo.png');
 }
 
 .spotify-playlist:before, .spotify-playlist:after {
@@ -396,7 +397,7 @@ h4 {
 }
 
 #watch {
-  background-image: url('/bg caracol didge.jpeg');
+  background-image: url('/janax/bg caracol didge.jpeg');
   padding: 5rem 0;
   background-position: 57%;
 }
@@ -407,7 +408,7 @@ h4 {
 }
 
 #experience {
-  background-image: url('/experience.png');
+  background-image: url('/janax/experience.png');
   padding: 5rem 0;
 }
 
@@ -427,7 +428,7 @@ h4 {
 } 
 
 #photos {
-  background-image: url('/photos.png');
+  background-image: url('/janax/photos.png');
   padding: 5rem 0;
   text-align: center;
 }
@@ -440,7 +441,7 @@ h4 {
 }
 
 #connect {
-  background: url('/connect.png') rgba(0, 0, 0, .2);
+  background: url('/janax/connect.png') rgba(0, 0, 0, .2);
   background-size: cover;
   background-blend-mode: multiply;
   padding: 5rem 0;
@@ -450,7 +451,7 @@ h4 {
 }
 
 .painted-spread {
-  background: url('/scratched bg.png');
+  background: url('/janax/scratched bg.png');
   background-size: contain;
   margin: -1em;
   padding: 1em;
@@ -476,7 +477,7 @@ h4 {
 
 .paypal {
   color: #FFFEFC;
-  background-image: url('/pp border.png');
+  background-image: url('/janax/pp border.png');
   background-size: cover;
   padding: 1em;
 }
@@ -508,7 +509,7 @@ h4 {
   width: calc(100% - 4em);
   padding: 2em 4em;
   float: left;
-  background-image: url('/quote texture.png') !important;
+  background-image: url('/janax/quote texture.png') !important;
   background-size: contain !important;
   background-blend-mode: multiply !important;
   margin-left: 2em;
@@ -607,9 +608,9 @@ h4 {
   }
 }
 
-@media only screen and (max-width: 470px) and (min-width: 400px)  {
-  #about-text {
-    margin-top: 600px !important;
+@media only screen and (max-width: 470px) and (min-width: 390px)  {
+  #about-final-quote {
+    margin-bottom: 100px;
   }
 }
 
@@ -643,7 +644,7 @@ h4 {
   .top-nav {
     padding: 0;
     top: 0;
-    background-image: url('/m_menu.png');
+    background-image: url('/janax/m_menu.png');
     background-size: cover !important;
     justify-content: start;
     transition: top .7s ease-in-out;
@@ -697,10 +698,10 @@ h4 {
   }
 
   #splash-nav .button{
-    background: transparent !important;
-    border: none;
+    /* background: transparent !important; */
+    /* border: none; */
     margin-bottom: 1.5em;
-    box-shadow: none !important;
+    /* box-shadow: none !important; */
   }
 
   #splash-arrows img {
@@ -709,7 +710,7 @@ h4 {
   }
 
   #quote-container {
-    background-image: url('/m_quote texture.png');
+    background-image: url('/janax/m_quote texture.png');
     background-size: cover;
     text-align: center;
   }
@@ -721,7 +722,7 @@ h4 {
   }
 
   #about-me {
-    background-image: url('/m_about me.png');
+    background-image: url('/janax/m_about me.png');
     padding-top: 2em;
   }
 
@@ -737,6 +738,8 @@ h4 {
   #about-final-quote {
     font-size: 18px;
     background: none;
+    background-image: url('/janax/scratched bg.png');
+    background-size: cover;
   }
 
   #about-final-quote p {
@@ -755,6 +758,7 @@ h4 {
 
   .spotify-playlist {
     max-width: 80vw;
+    max-height: 150px;
     margin: auto;
     padding-right: 8px;
   }
@@ -766,14 +770,14 @@ h4 {
   .spotify-playlist:before {
     left: -1.5em;
     width: 8px;
-    background-image: url('/m_bamboo.png');
+    background-image: url('/janax/m_bamboo.png');
   }
   
   .spotify-playlist:after {
     content: '';
     right: calc(-1.5em + 8px);
     width: 8px;
-    background-image: url('/m_bamboo.png');
+    background-image: url('/janax/m_bamboo.png');
   }
 
   .soundcloud-arrows {
@@ -795,6 +799,22 @@ h4 {
     background-size: cover;
   }
 
+  #watch .flicking-arrow-prev, #watch .flicking-arrow-next {
+    filter: brightness(15);
+    border-radius: 10%;
+    padding: 1em 1.8em;
+    background-color: rgba(0,0,0,.3);
+    transform: scale(.5) translateY(-75%);
+  }
+
+  #watch .flicking-arrow-prev {
+    left: -20px;
+  }
+
+  #watch .flicking-arrow-next {
+    right: -20px;
+  }
+
   .popup-animate .consider-subscribing {
     font-size: small;
     text-align: center;
@@ -810,23 +830,24 @@ h4 {
   }
 
   #experience .mobile-only p:nth-child(1) {
-    background-image: url('/m_scratched bg.png');
+    background-image: url('/janax/m_scratched bg.png');
   }
 
   #photos {
-    background-image: url('/m_photos.png');
+    background-image: url('/janax/m_photos.png');
     background-size: cover;
   }
 
   #connect {
-    background: url('/m_connect.png') rgba(0, 0, 0, .3);
+    background: url('/janax/connect.png') rgba(0, 0, 0, .3);
     background-size: cover;
+    background-position-x: 19%;
   }
 
   #connect-contacts {
     font-size: 18px;
     line-height: 20px;
-    /* background: url('/m_scratched bg.png'); */
+    /* background: url('/janax/m_scratched bg.png'); */
     background-size: cover;
     padding: 1em 0;
   }
@@ -855,6 +876,15 @@ h4 {
   transform: translateY(50vh);
 }
 
+@keyframes glide {
+  from {
+      background-position:0 0;
+  } to {
+    background-position:100% 0;
+
+  }
+}
+
 @keyframes updown {
   0% {
       bottom: 3%;
@@ -872,7 +902,7 @@ h4 {
     transform: translateY(1vh);
   }
   50% {
-    transform: translateY(0);
+    transform: translateY(-1vh);
   }
   100% {
     transform: translateY(1vh);
