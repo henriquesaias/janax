@@ -7,14 +7,13 @@ import "@egjs/flicking-plugins/dist/arrow.css";
 
 
 export default function Photos() {
-  const photos = [1, 2, 3, 4, 5, 6, 7]
+  const photos = [1, 2, 3, 4, 5, 6, 7, 8]
   const plugins = [new Arrow(), new Perspective({ rotate: 0.5, perspective: 600 })]
 
   return (
     <section id="photos">
       <div className="title-container">
         <h2>Photos</h2>
-        {/* <p>HI - FI</p> */}
       </div>
 
       <div className='flicking-container'>
@@ -27,7 +26,7 @@ export default function Photos() {
         >
           {photos.map((photo) =>
             <div key={photo}>
-              <Image src={`${prefix}/FOTOS/${photo}.jpg`} className='slider-photo' verticalAlign='middle' alt={photo} />
+              <Image src={`${prefix}/FOTOS/${photo}.webp`} draggable={false} className='slider-photo' verticalAlign='middle' alt={photo} />
             </div>
           )}
           <ViewportSlot>
@@ -40,8 +39,8 @@ export default function Photos() {
       <div id="download-photos">
         <a href="https://drive.google.com/drive/folders/1YR9dXe6xwinw5lnzUd74rjVNUBB_GEdn?usp=share_link" target="_blank">
           <Button>
-            Download<br />
-            High Quality
+          &bull; Download &bull;<br />
+            <small>(High Quality)</small>
           </Button>
         </a>
       </div>

@@ -40,7 +40,7 @@ export default function Connect() {
               <Image alt='' src={`${prefix}/vector arrow 2.png`} />
             </div>
 
-            <div style={{ textAlign: 'center' }}>
+            <div style={{ textAlign: 'center', marginTop: '-3em' }}>
               <a href='https://paypal.me/janaxpachamusica' target="_blank">
                 <Button circular basic className='paypal-btn'><Icon circular size='huge' name='paypal' fitted /></Button>
               </a>

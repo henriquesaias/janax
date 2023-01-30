@@ -32,7 +32,7 @@ export default function Watch() {
       <Script src="https://apis.google.com/js/platform.js" />
       <div className="title-container">
         <h2>Watch</h2>
-        <p>"How the Magic Happens"</p>
+        <p><span className='painted-spread'>"How the Magic Happens"</span></p>
       </div>
       <Grid padded relaxed='very' centered className='hidden-mobile'>
         <Grid.Row columns={3} verticalAlign='middle'>
@@ -89,11 +89,11 @@ export default function Watch() {
                   open={open === vid.id}
                   trigger={
                     <Image
-                        alt='Youtube video thumbnail'
-                        style={{ borderRadius: 4 }}
-                        src={`https://img.youtube.com/vi/${vid.id}/maxresdefault.jpg`}
-                        className='cursor-pointer thumbnail-container'
-                      />
+                      alt='Youtube video thumbnail'
+                      style={{ borderRadius: 4 }}
+                      src={`https://img.youtube.com/vi/${vid.id}/maxresdefault.jpg`}
+                      className='cursor-pointer thumbnail-container'
+                    />
                   }
                   onClose={() => setOpen('')}
                   onOpen={() => setOpen(vid.id)}

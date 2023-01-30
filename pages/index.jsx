@@ -31,7 +31,7 @@ export default function Home() {
         <title>Janax Pacha</title>
         <meta name="description" content="The Land of Heaven" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/icon-dorado.png" />
       </Head>
 
       {!menuOpen

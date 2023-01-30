@@ -3,8 +3,6 @@ import { prefix } from '../utils/prefix.js'
 import { Image } from 'semantic-ui-react'
 
 export default function Experience({ section, triggered }) {
-  const [option, setOption] = React.useState(true)
-
   return (
     <section id="experience">
       <div className='title-container'>
@@ -19,37 +17,30 @@ export default function Experience({ section, triggered }) {
             }`
           }
         >
-          <p>My Live set is a pure improvised experience where I merge tribal & ethnic instruments with electronic sounds and chants.</p>
+          <p>The power and the medicine I can share with you is through Sound, Vibration & Frequency</p>
 
-          <p>Dive into these journeys with me...</p>
+          <p>These Journeys will guide you to a higher State -  “The Land of Heaven” Janax Pacha</p>
 
-          <p>CLICK BELOW</p>
-
-          <div className='soundcloud-arrows'>
+          <div className='soundcloud-arrows updownRel'>
             <Image alt='' src={`${prefix}/vector arrow 1.png`} />
             <Image alt='' src={`${prefix}/vector arrow 2.png`} />
           </div>
         </div>
 
         <div className='py2 mobile-only'>
-          <p>My Live set is a pure improvised experience where I merge tribal & ethnic instruments with electronic sounds and chants.</p>
+          <p>The power and the medicine I can share with you is through Sound, Vibration & Frequency</p>
 
-          <p>Click below to dive into these journeys with me...</p>
+          <p>These Journeys will guide you to a higher State -  “The Land of Heaven” Janax Pacha</p>
 
-          <div className='soundcloud-arrows'>
+          <div className='soundcloud-arrows updownRel'>
             <Image alt='' src={`${prefix}/vector arrow 1.png`} />
             <Image alt='' src={`${prefix}/vector arrow 2.png`} />
           </div>
         </div>
       </div>
       <div className="soundcloud-playlist">
-        {
-          option
-            ? <iframe width="100%" height="400" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1260178069&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false&visual=true"></iframe>
-            : <iframe width="100%" height="400" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1260178069&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false"></iframe>
-        }
+        <iframe width="100%" height="400" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1260178069&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false"></iframe>
       </div>
-      <button onClick={() => setOption(!option)}>Click here to see option {option ? '2' : '1'}</button>
     </section>
   )
 }
