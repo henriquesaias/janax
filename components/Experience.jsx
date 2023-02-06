@@ -19,7 +19,7 @@ export default function Experience({ section, triggered }) {
         >
           <p>The power and the medicine I can share with you is through Sound, Vibration & Frequency</p>
 
-          <p>These Journeys will guide you to a higher State -  “The Land of Heaven” Janax Pacha</p>
+          <p>These journeys will guide you To a Higher State, to Janax Pacha “The land of Heaven” </p>
 
           <div className='soundcloud-arrows updownRel'>
             <Image alt='' src={`${prefix}/vector arrow 1.png`} />
@@ -28,9 +28,9 @@ export default function Experience({ section, triggered }) {
         </div>
 
         <div className='py2 mobile-only'>
-          <p>The power and the medicine I can share with you is through Sound, Vibration & Frequency</p>
+          <p>The power & the Medicine I can share with you is through Sound, Vibration & Frequency</p>
 
-          <p>These Journeys will guide you to a higher State -  “The Land of Heaven” Janax Pacha</p>
+          <p>These journeys will guide you to a Higher State, to Janax Pacha “The Land of Heaven” </p>
 
           <div className='soundcloud-arrows updownRel'>
             <Image alt='' src={`${prefix}/vector arrow 1.png`} />
@@ -42,5 +42,6 @@ export default function Experience({ section, triggered }) {
         <iframe width="100%" height="400" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1260178069&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false"></iframe>
       </div>
     </section>
+    // TODO section separation between experience and photos
   )
 }

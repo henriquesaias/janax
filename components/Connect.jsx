@@ -24,6 +24,7 @@ export default function Connect() {
                 <Image alt='' src={`${prefix}/dot.png`} /> <Image alt='' src={`${prefix}/dot2.png`} /> <Image alt='' src={`${prefix}/dot3.png`} /> <Image alt='' src={`${prefix}/arrow right.png`} className='tight' /> <Image alt='' src={`${prefix}/arrow right.png`} className='tight' /> <Image alt='' src={`${prefix}/arrow right.png`} className='tight' /> <Image alt='' src={`${prefix}/dot4.png`} /> <Image alt='' src={`${prefix}/dot5.png`} /> <Image alt='' src={`${prefix}/dot6.png`} />
               </div>
               <br className='mobile-only' />
+              {/* // left aligned but still centered */}
               CONTACT
               <br className='mobile-only' />
               <div className='icons-container hidden-mobile'>
@@ -49,5 +50,8 @@ export default function Connect() {
         </Grid.Row>
       </Grid>
     </section>
+
+    // TODO separation between sections
+    // instead of centered emails, more to the right
   )
 }

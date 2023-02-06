@@ -20,6 +20,21 @@ a:hover {
   box-sizing: border-box;
 }
 
+section:not(#splash, #listen, #watch, #connect) {
+  position: relative;
+  margin-bottom: 15vh;
+}
+
+section:not(#splash, #listen, #watch, #connect)::after {
+  position: absolute;
+  bottom: -15vh;
+  content: '';
+  display: block;
+  height: 15vh;
+  width: 100vw;
+  background-image: url('/janax/bg caracol didge.jpeg');
+}
+
 main {
   width: 100%;
   min-width: 100vw;
@@ -112,6 +127,10 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#listen .flex-center img {
+  position: absolute;
 }
 
 .cursor-pointer {
@@ -255,7 +274,6 @@ h4 {
   background-image: url('/janax/quote texture.png');
   background-size: cover;
   text-align: center;
-  overflow: hidden;
 }
 
 #hanaq-quote {
@@ -263,21 +281,15 @@ h4 {
   padding: 3em;
   max-width: 1100px;
   font-family: 'Cabin Sketch';
-  font-size: 36px;
+  font-size: 28px;
   line-height: 42px;
   letter-spacing: 0.2em;
   color: #3C4230;
   transition: all 1s ease-in-out;
 }
 
-#hidden-img {
-  background-image: url('/janax/home pic cropped.jpeg');
-  background-size: cover;
-  min-height: 60vh;
-}
-
 #about-me {
-  background-image: url('/janax/about me.png');
+  background-image: url('/janax/about me2.png');
   background-size: cover;
   background-position: center;
   padding: 5rem 0;
@@ -310,7 +322,7 @@ h4 {
 
 #about-text p {
   margin-bottom: .5em;
-  line-height: 1.3em;
+  line-height: 1.1em;
 }
 
 #about-final-quote {
@@ -359,7 +371,7 @@ h4 {
 
 #shop-container, #watch-more, #download-photos {
   text-align: center;
-  margin: 2em 0 3em 0;
+  margin: 2em 0;
   color: #3C4230;
 }
 
@@ -436,8 +448,6 @@ h4 {
 #download-photos .button {
   margin-top: 3em;
   line-height: 1.8;
-  /* color: #4A503D;
-  background: transparent; */
 }
 
 #connect {
@@ -452,10 +462,8 @@ h4 {
 
 .painted-spread {
   background: url('/janax/scratched bg.png');
-  background-size: contain;
-  margin: -1em;
+  background-size: cover;
   padding: 1em;
-  border-radius: 35%;
 }
 
 #connect-contacts {
@@ -475,27 +483,41 @@ h4 {
   filter: brightness(10);
 }
 
-.paypal {
+i.paypal {
   color: #FFFEFC;
-  background-image: url('/janax/pp border.png');
-  background-size: cover;
   padding: 1em;
+  animation: glideAntiRotate 35s linear infinite;
 }
 
-.paypal-btn {
+#connect .paypal-btn {
+  background-color: transparent !important;
+  background-image: url('/janax/pp border.png') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat;
   box-shadow: none !important;
   margin-top: 5rem !important;
+  animation: glideRotate 35s linear infinite;
+  padding: .5em;
+  opacity: .8;
 }
 
 #connect .paypal-btn:hover {
   background-color: transparent !important;
+  background-image: url('/janax/pp border.png') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat;
   filter: contrast(1.5);
   transition: all .5s ease-out;
 }
 
+#connect .ui.button>.icon:not(.button) {
+  opacity: 1;
+}
+
 #connect .icons-container img {
   margin-left: -.2rem;
-  /* opacity: 1; */
 }
 
 #watch .thumbnail-container {
@@ -514,6 +536,8 @@ h4 {
   background-blend-mode: multiply !important;
   margin-left: 2em;
   border-radius: 4px;
+  z-index: 999;
+  position: relative;
 }
 
 /* MEDIA QUERIES */
@@ -558,9 +582,22 @@ h4 {
 }
 
 @media (min-width: 600px) {  
+  #watch .title-container {
+    margin-bottom: 2em;
+  }
+  
   .spotify-playlist {
+    margin-top: -4em !important;
     width: 52%;
     margin: auto;
+  }
+
+  #shop-container {
+    margin: 0;
+  }
+
+  .listen-symbol {
+    margin-top: -1em;
   }
 
   .soundcloud-playlist, #experience .title-container {
@@ -608,12 +645,6 @@ h4 {
   }
 }
 
-@media only screen and (max-width: 470px) and (min-width: 390px)  {
-  #about-final-quote {
-    margin-bottom: 100px;
-  }
-}
-
 @media (max-width: 600px) {
   h2 {
     padding-left: .2em !important;
@@ -621,8 +652,16 @@ h4 {
     line-height: 42.16px !important;
   }
 
+  #connect h2 {
+    margin-bottom: 1.5em;
+  }
+
   h4 {
     font-size: 30px !important;
+  }
+
+  #splash-nav .button {
+    margin: 0 7rem;
   }
 
   .hidden-mobile {
@@ -686,7 +725,7 @@ h4 {
   }
 
   #logo-container {
-    margin-bottom: 0;
+    margin-bottom: 3em;
   }
   
   #logo-container img {
@@ -695,6 +734,10 @@ h4 {
 
   #splash-nav {
     flex-direction: column;
+  }
+
+  #splash.full-page.flex {
+    padding: 0;
   }
 
   #splash-nav .button{
@@ -713,6 +756,7 @@ h4 {
     background-image: url('/janax/m_quote texture.png');
     background-size: cover;
     text-align: center;
+    margin-bottom: 15em;
   }
 
   #hanaq-quote {
@@ -749,6 +793,14 @@ h4 {
   .title-container {
     padding: .5em;
     font-size: 18px !important;
+  }
+
+  #listen .title-container {
+    margin-bottom: 1em;
+  }
+
+  .listen-symbol {
+    margin: 3em auto 6em auto;
   }
 
   .title-container p, #shop-container p {
@@ -881,7 +933,22 @@ h4 {
       background-position:0 0;
   } to {
     background-position:100% 0;
+  }
+}
 
+@keyframes glideRotate {
+  from {
+    transform: rotate(0deg);
+  } to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes glideAntiRotate {
+  from {
+    transform: rotate(360deg);
+  } to {
+    transform: rotate(0deg);
   }
 }
 

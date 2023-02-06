@@ -7,7 +7,7 @@ export default function AboutMe({ section, triggered }) {
   const router = useRouter()
 
   return (
-    <section id="about-me">
+    <section id="about-me" className='full-page'>
       <Grid padded='horizontally' verticalAlign='bottom'>
         <Grid.Row>
           <Grid.Column computer={8}></Grid.Column>

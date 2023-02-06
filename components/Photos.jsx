@@ -38,12 +38,14 @@ export default function Photos() {
 
       <div id="download-photos">
         <a href="https://drive.google.com/drive/folders/1YR9dXe6xwinw5lnzUd74rjVNUBB_GEdn?usp=share_link" target="_blank">
-          <Button>
-          &bull; Download &bull;<br />
-            <small>(High Quality)</small>
+          <Button style={{ lineHeight: '.9em' }}>
+            <img src={`${prefix}/losangle.png`} style={{ filter: 'brightness(10)', transform: 'translateY(13px)', marginRight: '.5em' }} />
+            &nbsp;Download&nbsp;
+            <img src={`${prefix}/losangle.png`} style={{ filter: 'brightness(10)', transform: 'translateY(13px)', marginLeft: '.2em'  }} /><br />
+            <small style={{ fontSize: '.6em', marginLeft: '.3em' }}>(High Quality)</small>
           </Button>
         </a>
       </div>
-    </section>
+    </section >
   )
 }

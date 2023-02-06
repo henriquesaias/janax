@@ -13,7 +13,7 @@ export default function Watch() {
 
   const watch = [
     { id: 'eGuvf25VVOk' },
-    { id: 'LVbxNveLkwQ' },
+    { id: 'F36Ws9TpVts' },
     { id: 'G1Xayi4eHiY' },
     { id: 'mvty2Scdn5U' },
     { id: '' },
@@ -79,42 +79,29 @@ export default function Watch() {
         </Grid.Row>
       </Grid>
       <div className='mobile-only'>
-        <div className='p5-2'>
-          <Flicking
-            circular={true}
-            panelsPerView={1}
-            plugins={plugins}
-          >
-            {watch.map((vid, i) =>
-              i !== 4 && <div key={vid.id}>
-                <Modal
-                  dimmer='blurring'
-                  closeIcon
-                  open={open === vid.id}
-                  trigger={
-                    <Image
-                      alt='Youtube video thumbnail'
-                      style={{ borderRadius: 4 }}
-                      src={`https://img.youtube.com/vi/${vid.id}/maxresdefault.jpg`}
-                      className='cursor-pointer thumbnail-container'
-                    />
-                  }
-                  onClose={() => setOpen('')}
-                  onOpen={() => setOpen(vid.id)}
-                >
-                  <Embed
-                    id={vid.id}
-                    source='youtube'
-                    active
-                  />
-                </Modal>
-              </div>
-            )}
-            <ViewportSlot>
+        <div style={{ padding: '1em' }}>
+          <Image
+            alt='Youtube video thumbnail'
+            style={{ borderRadius: 4 }}
+            src={`https://img.youtube.com/vi/eGuvf25VVOk/maxresdefault.jpg`}
+            className='cursor-pointer thumbnail-container'
+          />
+          <Image
+            alt='Youtube video thumbnail'
+            style={{ borderRadius: 4, margin: '1.5em 0' }}
+            src={`https://img.youtube.com/vi/F36Ws9TpVts/maxresdefault.jpg`}
+            className='cursor-pointer thumbnail-container'
+          />
+          <Image
+            alt='Youtube video thumbnail'
+            style={{ borderRadius: 4 }}
+            src={`https://img.youtube.com/vi/zPAZTPVDUo4/maxresdefault.jpg`}
+            className='cursor-pointer thumbnail-container'
+          />
+          {/* 
+            TODO arrow as play button that onClick goes to youtube
               <img src={`${prefix}/left arrow.png`} className="flicking-arrow-prev" />
-              <img src={`${prefix}/right arrow.png`} className="flicking-arrow-next" />
-            </ViewportSlot>
-          </Flicking>
+               */}
         </div>
         <div id="watch-more">
           <a

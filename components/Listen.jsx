@@ -6,7 +6,7 @@ export default function Listen() {
   return (
     <section id="listen">
       <div className="title-container">
-        <h2>Listen</h2>
+        <h2 style={{ marginBottom: '1em' }}>Listen</h2>
         <p>Latest Singles, EPs & Albums</p>
       </div>
       <div className="spotify-playlist">
@@ -14,13 +14,16 @@ export default function Listen() {
       </div>
       <div id="shop-container">
         <br /><br />
-        <Image src={`${prefix}/listen symbol.png`} className='mb3' centered size='tiny' />
-        <p className='flex-center' style={{ marginBottom: '2rem' }}>
-          <img src={`${prefix}/losangle.png`} />&nbsp; Unreleased Songs & Full Sets&nbsp; <img src={`${prefix}/losangle.png`} />
+        <Image src={`${prefix}/listen symbol.png`} className='mb2 listen-symbol' centered size='tiny' />
+        <p className='flex-center' style={{ position: 'relative' }}>
+          <span className='mobile-only' style={{ fontSize: 20 }}>Unreleased Songs <br />& Live Sets</span>
+          <span className='hidden-mobile'>Unreleased Songs & Live Sets</span>
         </p>
         <a href="https://janaxpacha.bandcamp.com/" target="_blank" rel="noreferrer noopener">
           <Button>
-            &bull; Shop my Music &bull;<br />
+            <img src={`${prefix}/losangle.png`} style={{ filter: 'brightness(10)', transform: 'translateY(20px)', marginRight: '.5em' }} />
+            &nbsp;Shop my Music&nbsp;
+            <img src={`${prefix}/losangle.png`} style={{ filter: 'brightness(10)', transform: 'translateY(20px)', marginLeft: '.2em' }} /><br />
             <Icon fitted name='bandcamp' size='large' />
           </Button>
         </a>
