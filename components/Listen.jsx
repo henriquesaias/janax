@@ -23,7 +23,7 @@ export default function Listen() {
           <Button>
             <img src={`${prefix}/losangle.png`} style={{ filter: 'brightness(10)', transform: 'translateY(4px)', marginRight: '.5em' }} />
             &nbsp;Shop my Music&nbsp;<Icon fitted name='bandcamp' size='large' />
-            <img src={`${prefix}/losangle.png`} style={{ filter: 'brightness(10)', transform: 'translateY(4px)', marginLeft: '.2em' }} />
+            <img src={`${prefix}/losangle.png`} style={{ filter: 'brightness(10)', transform: 'translateY(4px)', marginLeft: '.6em' }} />
           </Button>
         </a>
       </div>
