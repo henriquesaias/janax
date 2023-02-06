@@ -6,11 +6,11 @@ export default function Listen() {
   return (
     <section id="listen">
       <div className="title-container">
-        <h2 style={{ marginBottom: '1em' }}>Listen</h2>
+        <h2 style={{ marginBottom: '3rem' }}>Listen</h2>
         <p>Latest Singles, EPs & Albums</p>
       </div>
       <div className="spotify-playlist">
-        <iframe style={{ borderRadius: 12 }} src="https://open.spotify.com/embed/artist/3BHXRZv18jHRR8RDuSq9gK?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allowFullScreen="" allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style={{ borderRadius: 12 }} src="https://open.spotify.com/embed/artist/3BHXRZv18jHRR8RDuSq9gK?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowFullScreen="" allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
       <div id="shop-container">
         <br /><br />
