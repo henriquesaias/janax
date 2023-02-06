@@ -21,10 +21,9 @@ export default function Listen() {
         </p>
         <a href="https://janaxpacha.bandcamp.com/" target="_blank" rel="noreferrer noopener">
           <Button>
-            <img src={`${prefix}/losangle.png`} style={{ filter: 'brightness(10)', transform: 'translateY(20px)', marginRight: '.5em' }} />
-            &nbsp;Shop my Music&nbsp;
-            <img src={`${prefix}/losangle.png`} style={{ filter: 'brightness(10)', transform: 'translateY(20px)', marginLeft: '.2em' }} /><br />
-            <Icon fitted name='bandcamp' size='large' />
+            <img src={`${prefix}/losangle.png`} style={{ filter: 'brightness(10)', transform: 'translateY(4px)', marginRight: '.5em' }} />
+            &nbsp;Shop my Music&nbsp;<Icon fitted name='bandcamp' size='large' />
+            <img src={`${prefix}/losangle.png`} style={{ filter: 'brightness(10)', transform: 'translateY(4px)', marginLeft: '.2em' }} />
           </Button>
         </a>
       </div>
