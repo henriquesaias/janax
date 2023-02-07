@@ -9,7 +9,7 @@ export default function Experience({ section, triggered }) {
         <h2>Experience</h2>
         <div
           className={
-            `py3 hidden-mobile ${section === 'experience'
+            `py1 hidden-mobile ${section === 'experience'
               ? 'animate-into-view'
               : triggered
                 ? 'animate-into-view'
@@ -42,6 +42,5 @@ export default function Experience({ section, triggered }) {
         <iframe width="100%" height="400" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1260178069&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false"></iframe>
       </div>
     </section>
-    // TODO section separation between experience and photos
   )
 }
