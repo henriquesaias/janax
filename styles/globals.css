@@ -42,6 +42,17 @@ main {
   min-height: 100vh;
 }
 
+.animate-icon {
+  margin-bottom: .8em;
+  animation: updownRel2 3s linear infinite; 
+}
+
+.shop-music-button:hover>.animate-icon {
+  margin-bottom: .8em;
+  animation: none;
+  transform: translateY(2vh) ;
+}
+
 h2 {
   font-family: 'Cabin Sketch' !important;
   text-transform: uppercase;
@@ -293,7 +304,7 @@ h4 {
 }
 
 #about-me {
-  background-image: url('/janax/about me2.png');
+  background-image: url('/janax/aboutme2.png');
   background-size: cover;
   background-position: center;
   padding: 6rem 0 5rem 0;
@@ -318,7 +329,7 @@ h4 {
 #about-text {
   font-family: 'Neucha' !important;
   color: #3C4230;
-  font-size: 23px;
+  font-size: 20px;
   letter-spacing: 0.2em;
   margin-top: 2em;
   padding: 0 0.5em;
@@ -334,7 +345,7 @@ h4 {
   font-family: 'Averia Sans Libre';
   font-style: italic;
   font-weight: 400;
-  font-size: 23px;
+  font-size: 20px;
   text-align: center;
   letter-spacing: 0.16em;
   color: #3C4230;
@@ -891,7 +902,7 @@ i.paypal {
     filter: brightness(1);
     border-radius: 50%;
     background-image: url('/janax/button background.png') !important;
-    background-color: rgba(74, 80, 61, 0.75) !important;
+    background-color: rgba(80, 80, 80, 0.55) !important;
     background-repeat: repeat !important;
     background-size: contain !important;
     box-shadow: 0 5px 5px rgba(54, 60, 41, 0.6);
@@ -902,6 +913,7 @@ i.paypal {
   #watch .arrow-play-icon {
     filter: brightness(10);
     opacity: .8;
+    transform: translateX(5px);
   }
 
   .popup-animate .consider-subscribing {
@@ -1009,6 +1021,18 @@ i.paypal {
   }
   100% {
     transform: translateY(1vh);
+  }
+}
+
+@keyframes updownRel2 {
+  0% {
+    transform: translateY(1.5vh);
+  }
+  50% {
+    transform: translateY(2vh);
+  }
+  100% {
+    transform: translateY(1.5vh);
   }
 }
 

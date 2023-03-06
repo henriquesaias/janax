@@ -20,10 +20,15 @@ export default function Listen() {
           <span className='hidden-mobile'>Unreleased Songs & Live Sets</span>
         </p>
         <a href="https://janaxpacha.bandcamp.com/" target="_blank" rel="noreferrer noopener">
-          <Button>
+          <Button className='shop-music-button'>
+
             <img src={`${prefix}/losangle.png`} style={{ filter: 'brightness(10)', transform: 'translateY(4px)', marginRight: '.5em' }} />
-            &nbsp;Shop my Music&nbsp;<Icon fitted name='bandcamp' size='large' />
+            &nbsp;Shop my Music
             <img src={`${prefix}/losangle.png`} style={{ filter: 'brightness(10)', transform: 'translateY(4px)', marginLeft: '.6em' }} />
+            <div className='animate-icon'>
+              <Icon fitted name='bandcamp' size='large' />
+            </div>
+
           </Button>
         </a>
       </div>
