@@ -6,7 +6,7 @@ export default function Listen() {
   return (
     <section id="listen">
       <div className="title-container">
-        <h2 style={{ marginBottom: '3rem' }}>Listen</h2>
+        <h2>Listen</h2>
         <p>Latest Singles, EPs & Albums</p>
       </div>
       <div className="spotify-playlist">
