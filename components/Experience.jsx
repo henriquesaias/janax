@@ -17,7 +17,7 @@ export default function Experience({ section, triggered }) {
             }`
           }
         >
-          <p style={{marginBottom: '1em'}}>"The power and the medicine I can share with you is through Sound, Vibration & Frequency"</p>
+          <p style={{marginBottom: '1em'}}>"The power and the medicine I can share with you<br />is through Sound, Vibration & Frequency"</p>
           <Image alt='' src={`${prefix}/icon-verde.png`} width={64} centered style={{filter: 'opacity(.5)'}} />
           <p style={{margin: '1em 0 0 0', fontStyle: 'italic', filter: 'opacity(.75)'}}>These journeys will guide you To a Higher State,<br />to Janax Pacha “The land of Heaven”</p>
 
