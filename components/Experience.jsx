@@ -9,7 +9,7 @@ export default function Experience({ section, triggered }) {
         <h2>Experience</h2>
         <div
           className={
-            `py1 hidden-mobile ${section === 'experience'
+            `hidden-mobile ${section === 'experience'
               ? 'animate-into-view'
               : triggered
                 ? 'animate-into-view'
@@ -17,9 +17,9 @@ export default function Experience({ section, triggered }) {
             }`
           }
         >
-          <p>The power and the medicine I can share with you is through Sound, Vibration & Frequency</p>
-
-          <p>These journeys will guide you To a Higher State, to Janax Pacha “The land of Heaven” </p>
+          <p style={{marginBottom: '1em'}}>"The power and the medicine I can share with you is through Sound, Vibration & Frequency"</p>
+          <Image alt='' src={`${prefix}/icon-verde.png`} width={64} centered style={{filter: 'opacity(.5)'}} />
+          <p style={{margin: '1em 0 0 0', fontStyle: 'italic', filter: 'opacity(.75)'}}>These journeys will guide you To a Higher State,<br />to Janax Pacha “The land of Heaven”</p>
 
           <div className='soundcloud-arrows updownRel'>
             <Image alt='' src={`${prefix}/vector arrow 1.png`} />
@@ -27,12 +27,12 @@ export default function Experience({ section, triggered }) {
           </div>
         </div>
 
-        <div className='py2 mobile-only'>
-          <p>The power & the Medicine I can share with you is through Sound, Vibration & Frequency</p>
+        <div className='mobile-only'>
+          <p>"The power & the Medicine I can share with you is through Sound, Vibration & Frequency"</p>
+          <Image alt='' src={`${prefix}/icon-verde.png`} width={64} centered style={{filter: 'opacity(.5)'}} />
+          <p style={{fontStyle: 'italic', filter: 'opacity(.75)', margin: '1em 0 0 0'}}>These journeys will guide you to a Higher State, to Janax Pacha “The Land of Heaven”</p>
 
-          <p>These journeys will guide you to a Higher State, to Janax Pacha “The Land of Heaven” </p>
-
-          <div className='soundcloud-arrows updownRel'>
+          <div className='soundcloud-arrows updownRel' style={{marginBottom: -20}}>
             <Image alt='' src={`${prefix}/vector arrow 1.png`} />
             <Image alt='' src={`${prefix}/vector arrow 2.png`} />
           </div>

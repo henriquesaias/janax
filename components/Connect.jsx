@@ -6,11 +6,11 @@ export default function Connect() {
   return (
     <section id="connect" className='full-page'>
       <Grid container centered padded='horizontally'>
-        <h2 style={{ textAlign: 'center' }}>Connect</h2>
+        <h2 style={{ textAlign: 'center', marginBottom: '1em' }}>Connect</h2>
         <Grid.Row>
           <Grid.Column computer={4}></Grid.Column>
           <Grid.Column mobile={16} computer={12}>
-            <div id='connect-contacts'>
+            <div id='connect-contacts' style={{ marginTop: '1.5em' }}>
               BOOKINGS
               <br className='mobile-only' />
               <div className='icons-container hidden-mobile'>
