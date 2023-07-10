@@ -12,6 +12,7 @@ import TopMenu from '../components/TopMenu.jsx';
 import { InView } from 'react-intersection-observer';
 import { Icon, Image } from 'semantic-ui-react';
 import { prefix } from '../utils/prefix.js'
+import Player from '../components/Player.jsx';
 
 export default function Home() {
   const [section, setSection] = useState('splash')
@@ -34,6 +35,9 @@ export default function Home() {
         <link rel="icon" href="/icon-dorado.png" />
       </Head>
 
+      <span className='mobile-only menu-icon'>
+        <Player />
+      </span>
       {!menuOpen
         ? <Icon
           name={menuOpen ? 'close' : 'bars'}
