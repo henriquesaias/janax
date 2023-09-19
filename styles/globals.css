@@ -579,6 +579,7 @@ i.paypal {
 
 .animate-out-of-view {
   opacity: 0;
+  display: none;
   filter: blur(5px);
   transition: opacity .7s, filter 5s, transform 1s ease-in-out;
 }

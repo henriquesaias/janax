@@ -83,7 +83,7 @@ export default function Watch() {
             closeIcon
             open={open === 'eGuvf25VVOk'}
             trigger={
-              <div class="thumbnail-items-container">
+              <div className="thumbnail-items-container">
                 <Image
                   alt='Youtube video thumbnail'
                   style={{ borderRadius: 4 }}
@@ -111,7 +111,7 @@ export default function Watch() {
             closeIcon
             open={open === 'F36Ws9TpVts'}
             trigger={
-              <div class="thumbnail-items-container">
+              <div className="thumbnail-items-container">
                 <Image
                   alt='Youtube video thumbnail'
                   style={{ borderRadius: 4, margin: '1.5em 0' }}
@@ -137,7 +137,7 @@ export default function Watch() {
             closeIcon
             open={open === 'zPAZTPVDUo4'}
             trigger={
-              <div class="thumbnail-items-container">
+              <div className="thumbnail-items-container">
                 <Image
                   alt='Youtube video thumbnail'
                   style={{ borderRadius: 4 }}

@@ -15,7 +15,7 @@ export default function TopMenu({ setMenuOpen, section }) {
       </div>
 
       <span className='hidden-mobile'>
-      <Player />
+        <Player />
       </span>
 
       <div id="social-icons">

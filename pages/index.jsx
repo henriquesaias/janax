@@ -53,7 +53,10 @@ export default function Home() {
         </span>
       }
       <nav className={`top-nav ${menuOpen ? 'open-menu' : 'closed-menu'} ${section === 'splash' ? 'hidden' : ''}`}>
-        <TopMenu setMenuOpen={setMenuOpen} section={section} />
+        <TopMenu
+          setMenuOpen={setMenuOpen}
+          section={section}
+        />
       </nav>
 
       <main>
